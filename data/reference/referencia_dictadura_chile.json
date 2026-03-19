@@ -1,0 +1,92 @@
+{
+  "personas": [
+    "Augusto Pinochet Ugarte",
+    "Gustavo Leigh Guzmán",
+    "José Toribio Merino Castro",
+    "César Mendoza Durán",
+    "Manuel Contreras Sepúlveda",
+    "Odlanier Mena Salinas",
+    "Sergio Arellano Stark",
+    "Fernando Matthei Aubel",
+    "Lucía Hiriart de Pinochet",
+    "Jaime Guzmán Errázuriz",
+    "Hernán Büchi Buc",
+    "José Piñera Echeñique",
+    "Orlando Letelier",
+    "Gladys Marín",
+    "Patricio Aylwin",
+    "Clodomiro Almeyda",
+    "Hortensia Bussi",
+    "Carmen Hertz"
+  ],
+
+  "organismos": [
+    "DINA",
+    "CNI",
+    "Servicio de Inteligencia Militar",
+    "Operación Cóndor",
+    "Junta Militar de Gobierno"
+  ],
+
+  "lugares_tortura_detencion": [
+    "Villa Grimaldi",
+    "Londres 38",
+    "José Domingo Cañas 1367",
+    "Venda Sexy",
+    "Cuartel Simón Bolívar",
+    "Estadio Nacional",
+    "Estadio Chile (Víctor Jara)",
+    "Tres Álamos",
+    "Cuatro Álamos",
+    "Cuartel Terranova",
+    "Colonia Dignidad",
+    "Isla Dawson",
+    "Tejas Verdes",
+    "Cuartel Silva Palma",
+    "Regimiento Arica (La Serena)",
+    "Regimiento Tacna (Arica)",
+    "Campo de Prisioneros de Pisagua"
+  ],
+
+  "lugares_gobierno_dictadura": [
+    "Palacio de La Moneda",
+    "la moneda",
+    "Ministerio de Defensa",
+    "Escuela Militar",
+    "Televisión Nacional de Chile (TVN)",
+    "Canal 13",
+    "El Mercurio",
+    "Comisión Ortúzar (redacción Constitución 1980)"
+  ],
+
+  "oposicion_personas": [
+    "Orlando Letelier",
+    "Gladys Marín",
+    "Patricio Aylwin",
+    "Clodomiro Almeyda",
+    "Hortensia Bussi",
+    "Carmen Hertz"
+  ],
+
+  "oposicion_organizaciones": [
+    "Vicaría de la Solidaridad",
+    "Agrupación de Familiares de Detenidos Desaparecidos (AFDD)",
+    "Agrupación de Familiares de Ejecutados Políticos (AFEP)",
+    "CUT",
+    "FECh",
+    "Partido Socialista de Chile",
+    "Partido Comunista de Chile",
+    "Democracia Cristiana",
+    "Movimiento de Izquierda Revolucionaria (MIR)",
+    "Izquierda Cristiana",
+    "MAPU",
+    "MAPU-OC",
+    "Partido Radical"
+  ],
+
+  "lugares_oposicion": [
+    "Vicaría de la Solidaridad",
+    "Universidad Técnica del Estado (UTE)",
+    "Sedes sindicales y centros comunitarios"
+  ]
+}

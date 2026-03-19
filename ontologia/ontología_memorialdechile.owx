@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://text2kg/chile/memoria"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://text2kg/chile/memoria">
+    <Prefix name="" IRI="http://www.semanticweb.org/tomas/ontologies/2025/11/untitled-ontology-7/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#AgenteSospechoso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Desaparicion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DetencionIlegal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ejecucion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lugar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LugarOficial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LugarRepresivoDetectado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Persona"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tortura"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Victima"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Violencia"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mencionaAgenteSospechoso"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mencionaLugarOficial"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mencionaLugarRepresivoDetectado"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mencionaViolenciaRepresiva"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Domain:_Texto"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Range:_AgenteSospechoso"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Range:_LugarOficial"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Range:_LugarRepresivoDetectado"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Range:_Violencia"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AgenteSospechoso"/>
+        <Class IRI="#Persona"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Desaparicion"/>
+        <Class IRI="#Violencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DetencionIlegal"/>
+        <Class IRI="#Violencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ejecucion"/>
+        <Class IRI="#Violencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LugarOficial"/>
+        <Class IRI="#Lugar"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LugarRepresivoDetectado"/>
+        <Class IRI="#Lugar"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tortura"/>
+        <Class IRI="#Violencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Victima"/>
+        <Class IRI="#Persona"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#mencionaAgenteSospechoso"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#mencionaLugarOficial"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#mencionaLugarRepresivoDetectado"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#mencionaViolenciaRepresiva"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Domain:_Texto"/>
+        <ObjectProperty IRI="#mencionaAgenteSospechoso"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Domain:_Texto"/>
+        <ObjectProperty IRI="#mencionaLugarOficial"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Domain:_Texto"/>
+        <ObjectProperty IRI="#mencionaLugarRepresivoDetectado"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Domain:_Texto"/>
+        <ObjectProperty IRI="#mencionaViolenciaRepresiva"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Range:_AgenteSospechoso"/>
+        <ObjectProperty IRI="#mencionaAgenteSospechoso"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Range:_LugarOficial"/>
+        <ObjectProperty IRI="#mencionaLugarOficial"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Range:_LugarRepresivoDetectado"/>
+        <ObjectProperty IRI="#mencionaLugarRepresivoDetectado"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Range:_Violencia"/>
+        <ObjectProperty IRI="#mencionaViolenciaRepresiva"/>
+    </SubObjectPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
