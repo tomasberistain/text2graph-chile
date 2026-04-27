@@ -101,16 +101,16 @@ Los textos del corpus no se incluyen en este repositorio por razones de derechos
 
 
 **Densidad por texto**
-*La dimensión desconocida* de Nona Fernández es el texto con mayor densidad del corpus: 54 instancias de violencia, 41 lugares represivos detectados y 3 lugares oficiales. Es seguida por *La casa de los espíritus* de Isabel Allende con 24 instancias de violencia y 14 agentes identificados. En el extremo opuesto, los textos poéticos de Zurita (*Purgatorio*, *Anteparaíso*) y *Bobby Sands desfallece* de Berenguer registran muy poca o ninguna violencia explícita — la represión aparece de forma oblicua o simbólica.
+*La dimensión desconocida* de Nona Fernández es el texto con mayor densidad del corpus: 54 instancias de violencia, 41 lugares represivos detectados y 3 lugares oficiales. Es seguida por *La casa de los espíritus* de Isabel Allende con 24 instancias de violencia y 14 agentes identificados. En el extremo opuesto, los textos poéticos de Zurita (*Purgatorio*, *Anteparaíso*) y *Bobby Sands desfallece* de Berenguer registran muy poca o ninguna violencia explícita, la represión aparece de forma oblicua o simbólica.
 
 **"El capitán"**
-La figura de "el capitán" aparece en 9 de los 12 textos del corpus — en Berenguer, Allende, Fernández, Bolaño, Zurita (dos veces), Díaz Eterovic, Lemebel (dos veces). El grafo no puede resolver si se trata del mismo hombre, pero su recurrencia a lo largo de autoras y géneros tan distintos sugiere que opera como arquetipo literario del agente represor anónimo.
+La figura de "el capitán" aparece en 9 de los 12 textos del corpus: en Berenguer, Allende, Fernández, Bolaño, Zurita (dos veces), Díaz Eterovic, Lemebel (dos veces). El grafo no puede resolver si se trata del mismo hombre, pero su recurrencia a lo largo de autoras y géneros tan distintos sugiere que opera como arquetipo literario del agente represor anónimo.
 
 **Lugares**
 El Estadio Nacional aparece en 3 textos (*Bandera de Chile*, *La dimensión desconocida*, *Tengo miedo torero*), la Escuela Militar en 4, y la Vicaría de la Solidaridad en 2. Los textos narrativos concentran la mayoría de los lugares oficiales; la poesía tiende a lugares genéricos o simbólicos (cárceles, cuarteles sin nombre).
 
 **Formas de violencia**
-La desaparición es la forma de violencia más distribuida a lo largo del corpus — aparece en casi todos los textos narrativos. La tortura física (golpes, electroshock, sangre) se concentra especialmente en Fernández y Allende. *A media asta* de Berenguer incluye un simulacro de fusilamiento como única instancia de violencia estructurada.
+La desaparición es la forma de violencia más distribuida a lo largo del corpus, aparece en casi todos los textos narrativos. La tortura física (golpes, electroshock, sangre) se concentra especialmente en Fernández y Allende. *A media asta* de Berenguer incluye un simulacro de fusilamiento como única instancia de violencia estructurada.
 
 **Lo que el grafo no captura**
 Los textos de Zurita son los más resistentes al método: *Purgatorio* y *Anteparaíso* registran cero lugares oficiales y mínima violencia explícita, pero son centrales en la literatura de memoria chilena. Esto sugiere un límite del enfoque basado en extracción de entidades para textos de alto contenido lírico o fragmentario.
