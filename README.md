@@ -12,9 +12,9 @@ El resultado es una visualización interactiva que mapea la violencia represiva 
 
 | Obra | Autora/Autor |
 |------|-------------|
-| A Media Asta | Carmen Berenguer |
+| A media asta | Carmen Berenguer |
 | Bandera de Chile | Elvira Hernández |
-| Bobby Sands Desfallece | Carmen Berenguer |
+| Bobby Sands desfallece | Carmen Berenguer |
 | La casa de los espíritus | Isabel Allende |
 | La dimensión desconocida | Nona Fernández |
 | Nocturno de Chile | Roberto Bolaño |
@@ -49,7 +49,6 @@ text2graph-chile/
 ## Requisitos
 
 - Python 3.9+
-- Docker no requerido
 - API key de OpenAI
 
 ## Instalación
