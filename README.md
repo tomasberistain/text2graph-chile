@@ -39,8 +39,8 @@ text2graph-chile/
 ├─ output/            ← resultados: JSON, TTL, HTML del grafo
 ├─ ontologia/         ← ontología OWL del dominio
 ├─ src/
-│  ├─ PROYECTO_FINAL_TEXT_2_GRAPH.py   ← extracción y generación de triples
-│  └─ GrafoFinal.py                    ← construcción y visualización del grafo
+│  ├─ extraccion.py     ← extracción y generación de triples
+│  └─ visualizacion.py  ← construcción y visualización del grafo
 ├─ .env.example
 ├─ requirements.txt
 └─ README.md
@@ -69,14 +69,14 @@ OPENAI_API_KEY=tu_api_key
 
 Colocar los archivos `.txt` del corpus en `data/input/` y ejecutar:
 ```bash
-python src/PROYECTO_FINAL_TEXT_2_GRAPH.py
+python src/extraccion.py
 ```
 
 Genera `output/RESULTADOS_FINALES_MEMORIA_CHILE.json` y `output/grafo_memoria_chile.ttl`.
 
 **2. Visualización del grafo:**
 ```bash
-python src/GrafoFinal.py
+python src/visualizacion.py
 ```
 
 Genera `output/memoria_chile_grafo_CATEGORIAS_ACTUALIZADAS.html`, que puede abrirse directamente en el navegador.
