@@ -1,41 +1,1173 @@
-@prefix : <http://text2kg/chile/memoria#> .
+@prefix chile: <http://text2kg/chile/memoria#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaLugarOficial :Lugar/Escuela_Militar .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaLugarOficial :Lugar/Estadio_Nacional .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaLugarOficial :Lugar/Vicaría_de_la_Solidaridad .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaLugarRepresivoDetectado :Lugar/el_cementerio_general .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaLugarRepresivoDetectado :Lugar/el_espacioso_recinto .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaLugarRepresivoDetectado :Lugar/el_regimiento .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaLugarRepresivoDetectado :Lugar/la_caseta_de_vigilancia .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaAgenteSospechoso :Persona/General .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaAgenteSospechoso :Persona/el_General .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaAgenteSospechoso :Persona/el_almirante_Urrutia .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaAgenteSospechoso :Persona/el_capitán .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaAgenteSospechoso :Persona/el_coronel_Abarzúa .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaAgenteSospechoso :Persona/el_general .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaAgenteSospechoso :Persona/el_general_Ortúzar .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaAgenteSospechoso :Persona/el_sargento .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaAgenteSospechoso :Persona/general_Ortúzar .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaAgenteSospechoso :Persona/los_generales .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaAgenteSospechoso :Persona/mi_General .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaAgenteSospechoso :Persona/mi_comandante .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaAgenteSospechoso :Persona/mi_general .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/desaparecido .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/desaparición_del_cuerpo .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/desaparición_en_los_vericuetos_del_enorme_Parlamento .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/desaparición_en_una_fumarola_de_tierra .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/golpes_apresurados .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/golpes_de_la_puerta .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/golpes_en_el_corazón .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/golpes_en_el_estómago .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/golpes_en_la_puerta .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/golpes_en_las_espaldas .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/golpes_en_los_cráneos .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/interrogatorio .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/nube_ácida_de_la_represión .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/sangre_que_se_limpiaban_en_la_carpeta .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/sangre_y_hematomas_acrobáticos .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/sobrevivencia_aporreada_de_la_dictadura .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/susto_cotidiano_de_la_dictadura .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/torturan .
-:Texto/Tengo_miedo_torero_Pedro_Lemebel :mencionaViolenciaRepresiva :Violencia/vigilando_en_el_baño_personal .
+<http://text2kg/chile/memoria#Texto/A_Media_Asta_Carmen_Bereguer> a chile:Texto ;
+    rdfs:label "A media asta"@es ;
+    dcterms:creator "Carmen Berenguer" ;
+    chile:mencionaAgenteSospechoso <http://text2kg/chile/memoria#Persona/el_capit%C3%A1n> ;
+    chile:mencionaViolenciaRepresiva <http://text2kg/chile/memoria#Violencia/cuerpo_ensangrentado>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_el_est%C3%B3mago>,
+        <http://text2kg/chile/memoria#Violencia/lav%C3%A1ndola_con_su_sangre>,
+        <http://text2kg/chile/memoria#Violencia/sangre_sangra>,
+        <http://text2kg/chile/memoria#Violencia/simulacro_de_fusilamiento> .
+
+<http://text2kg/chile/memoria#Texto/Anteparaiso_Raul_Zurita> a chile:Texto ;
+    rdfs:label "Anteparaíso"@es ;
+    dcterms:creator "Raúl Zurita" ;
+    chile:mencionaAgenteSospechoso <http://text2kg/chile/memoria#Persona/el_capit%C3%A1n> ;
+    chile:mencionaLugarRepresivoDetectado <http://text2kg/chile/memoria#Lugar/las_c%C3%A1rceles_de_las_ciudades> ;
+    chile:mencionaViolenciaRepresiva <http://text2kg/chile/memoria#Violencia/golpes_tumefactos>,
+        <http://text2kg/chile/memoria#Violencia/sangre> .
+
+<http://text2kg/chile/memoria#Texto/Bandera_De_Chile_Elvira_Hernandez> a chile:Texto ;
+    rdfs:label "Bandera de Chile"@es ;
+    dcterms:creator "Elvira Hernández" ;
+    chile:mencionaLugarOficial <http://text2kg/chile/memoria#Lugar/Estadio_Nacional> ;
+    chile:mencionaLugarRepresivoDetectado <http://text2kg/chile/memoria#Lugar/Avenida_General_Bulnes>,
+        <http://text2kg/chile/memoria#Lugar/Regimiento_de_San_Felipe> ;
+    chile:mencionaViolenciaRepresiva <http://text2kg/chile/memoria#Violencia/sangre_salpicada_de_parches>,
+        <http://text2kg/chile/memoria#Violencia/terror_generalizado> .
+
+<http://text2kg/chile/memoria#Texto/Bobby_Sands_Desfallece_Carmen_Bereguer> a chile:Texto ;
+    rdfs:label "Bobby Sands desfallece"@es ;
+    dcterms:creator "Carmen Berenguer" ;
+    chile:mencionaViolenciaRepresiva <http://text2kg/chile/memoria#Violencia/tortura> .
+
+<http://text2kg/chile/memoria#Texto/Estrella_distante_Roberto_Bolano> a chile:Texto ;
+    rdfs:label "Estrella distante"@es ;
+    dcterms:creator "Roberto Bolaño" ;
+    chile:mencionaAgenteSospechoso <http://text2kg/chile/memoria#Persona/comandante_Aquiles>,
+        <http://text2kg/chile/memoria#Persona/comandante_H%C3%A9ctor>,
+        <http://text2kg/chile/memoria#Persona/comandante_Paris>,
+        <http://text2kg/chile/memoria#Persona/comandante_Patroclo>,
+        <http://text2kg/chile/memoria#Persona/comandante_Ulises>,
+        <http://text2kg/chile/memoria#Persona/el_capit%C3%A1n>,
+        <http://text2kg/chile/memoria#Persona/el_capit%C3%A1n_Lindstrom>,
+        <http://text2kg/chile/memoria#Persona/el_coronel>,
+        <http://text2kg/chile/memoria#Persona/el_general_Cherniakovski>,
+        <http://text2kg/chile/memoria#Persona/el_teniente>,
+        <http://text2kg/chile/memoria#Persona/el_teniente_de_la_Fuerza_A%C3%A9rea>,
+        <http://text2kg/chile/memoria#Persona/los_generales>,
+        <http://text2kg/chile/memoria#Persona/un_teniente>,
+        <http://text2kg/chile/memoria#Persona/uno_de_los_tenientes> ;
+    chile:mencionaLugarRepresivoDetectado <http://text2kg/chile/memoria#Lugar/Revista_de_los_Vigilantes_Nocturnos_de_Arras>,
+        <http://text2kg/chile/memoria#Lugar/aer%C3%B3dromo_Capit%C3%A1n_Lindstrom>,
+        <http://text2kg/chile/memoria#Lugar/el_Capit%C3%A1n_Lindstrom>,
+        <http://text2kg/chile/memoria#Lugar/el_cuarto_de_la_v%C3%ADctima>,
+        <http://text2kg/chile/memoria#Lugar/la_base_Arturo_Prat>,
+        <http://text2kg/chile/memoria#Lugar/la_base_ant%C3%A1rtica_de_Arturo_Prat> ;
+    chile:mencionaViolenciaRepresiva <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_casi_de_todos_nuestros_amigos>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_las_gemelas>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_su_hermana_y_de_su_t%C3%ADa>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_del_cuerpo>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_en_los_%C3%BAltimos_d%C3%ADas_de_1973>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_en_los_primeros_de_1974>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_la_noche_de_su_secuestro>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_para_siempre>,
+        <http://text2kg/chile/memoria#Violencia/detenci%C3%B3n>,
+        <http://text2kg/chile/memoria#Violencia/golpes>,
+        <http://text2kg/chile/memoria#Violencia/golpes_recibidos_por_los_nazis>,
+        <http://text2kg/chile/memoria#Violencia/haci%C3%A9ndose_cortes_con_hojas_de_afeitar_y_salpicando_de_sangre_las_p%C3%A1ginas_de_Balzac_o_Maupassant>,
+        <http://text2kg/chile/memoria#Violencia/silencio>,
+        <http://text2kg/chile/memoria#Violencia/torturada>,
+        <http://text2kg/chile/memoria#Violencia/torturaron_y_luego_quisieron_asesinar_a_su_padre>,
+        <http://text2kg/chile/memoria#Violencia/traumatismo_craneal> .
+
+<http://text2kg/chile/memoria#Texto/La_casa_de_los_espiritus_Isabel_Allende> a chile:Texto ;
+    rdfs:label "La casa de los espíritus"@es ;
+    dcterms:creator "Isabel Allende" ;
+    chile:mencionaAgenteSospechoso <http://text2kg/chile/memoria#Persona/coronel_Garc%C3%ADa>,
+        <http://text2kg/chile/memoria#Persona/el_capit%C3%A1n>,
+        <http://text2kg/chile/memoria#Persona/el_comandante_Hurtado>,
+        <http://text2kg/chile/memoria#Persona/el_coronel>,
+        <http://text2kg/chile/memoria#Persona/el_coronel_Garc%C3%ADa>,
+        <http://text2kg/chile/memoria#Persona/el_coronel_Hurtado>,
+        <http://text2kg/chile/memoria#Persona/el_general_Hurtado>,
+        <http://text2kg/chile/memoria#Persona/el_general_de_los_carabineros>,
+        <http://text2kg/chile/memoria#Persona/el_teniente>,
+        <http://text2kg/chile/memoria#Persona/general_Hurtado>,
+        <http://text2kg/chile/memoria#Persona/los_coroneles>,
+        <http://text2kg/chile/memoria#Persona/los_generales>,
+        <http://text2kg/chile/memoria#Persona/un_coronel>,
+        <http://text2kg/chile/memoria#Persona/un_teniente> ;
+    chile:mencionaLugarOficial <http://text2kg/chile/memoria#Lugar/Escuela_Militar>,
+        <http://text2kg/chile/memoria#Lugar/Ministerio_de_Defensa> ;
+    chile:mencionaLugarRepresivoDetectado <http://text2kg/chile/memoria#Lugar/Cementerio_General>,
+        <http://text2kg/chile/memoria#Lugar/campo_de_concentraci%C3%B3n>,
+        <http://text2kg/chile/memoria#Lugar/los_cuarteles>,
+        <http://text2kg/chile/memoria#Lugar/patio_de_un_regimiento>,
+        <http://text2kg/chile/memoria#Lugar/recinto_de_tortura> ;
+    chile:mencionaViolenciaRepresiva <http://text2kg/chile/memoria#Violencia/aislamiento>,
+        <http://text2kg/chile/memoria#Violencia/ba%C3%B1ada_en_su_propia_sangre>,
+        <http://text2kg/chile/memoria#Violencia/camisa_desgarrada_y_manchada_de_sangre_seca>,
+        <http://text2kg/chile/memoria#Violencia/cubierto_de_sangre_seca>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_la_gente>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_del_cuerpo>,
+        <http://text2kg/chile/memoria#Violencia/destrozaron_a_golpes_el_escaso_mobiliario>,
+        <http://text2kg/chile/memoria#Violencia/dictadura_marxista>,
+        <http://text2kg/chile/memoria#Violencia/dictadura_mucho_m%C3%A1s_severa>,
+        <http://text2kg/chile/memoria#Violencia/golpes>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_el_est%C3%B3mago>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_el_vientre>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_las_costillas>,
+        <http://text2kg/chile/memoria#Violencia/golpes_y_patadas>,
+        <http://text2kg/chile/memoria#Violencia/hechos_de_sangre>,
+        <http://text2kg/chile/memoria#Violencia/interrogatorios>,
+        <http://text2kg/chile/memoria#Violencia/luchaba_contra_sus_enemigos_pol%C3%ADticos>,
+        <http://text2kg/chile/memoria#Violencia/negar_a_los_presos_y_a_los_torturados>,
+        <http://text2kg/chile/memoria#Violencia/ojos_vendados>,
+        <http://text2kg/chile/memoria#Violencia/piernas_y_muslos_torturados>,
+        <http://text2kg/chile/memoria#Violencia/sangre_del_pueblo>,
+        <http://text2kg/chile/memoria#Violencia/se_fue_en_sangre>,
+        <http://text2kg/chile/memoria#Violencia/torturados_juntos>,
+        <http://text2kg/chile/memoria#Violencia/vigilados_por_guardias_armados> .
+
+<http://text2kg/chile/memoria#Texto/La_ciudad_esta_triste_Ramon_Diaz_Eterovic> a chile:Texto ;
+    rdfs:label "La ciudad está triste"@es ;
+    dcterms:creator "Ramón Díaz Eterovic" ;
+    chile:mencionaAgenteSospechoso <http://text2kg/chile/memoria#Persona/el_capit%C3%A1n> ;
+    chile:mencionaViolenciaRepresiva <http://text2kg/chile/memoria#Violencia/broto_un_oscuro_hilo_de_sangre>,
+        <http://text2kg/chile/memoria#Violencia/desaparecido>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_una_muchacha>,
+        <http://text2kg/chile/memoria#Violencia/detenci%C3%B3n>,
+        <http://text2kg/chile/memoria#Violencia/detenci%C3%B3n_por_un_grupo_de_los_Servicios_de_Seguridad>,
+        <http://text2kg/chile/memoria#Violencia/golpes>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_el_cuerpo>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_el_est%C3%B3mago>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_la_cabeza>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_la_nuca>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_la_pieza_vecina>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_las_costillas>,
+        <http://text2kg/chile/memoria#Violencia/golpes_sobre_las_costillas_maltratadas>,
+        <http://text2kg/chile/memoria#Violencia/mancha_de_sangre_a_medio_secar>,
+        <http://text2kg/chile/memoria#Violencia/recibir_de_golpes_y_puntapi%C3%A9s>,
+        <http://text2kg/chile/memoria#Violencia/secuestro>,
+        <http://text2kg/chile/memoria#Violencia/torturaron_hasta_que_muri%C3%B3>,
+        <http://text2kg/chile/memoria#Violencia/torturas_a_estudiantes>,
+        <http://text2kg/chile/memoria#Violencia/trenzado_a_golpes> .
+
+<http://text2kg/chile/memoria#Texto/La_dimension_desconocida_Nona_Fernandez> a chile:Texto ;
+    rdfs:label "La dimensión desconocida"@es ;
+    dcterms:creator "Nona Fernández" ;
+    chile:mencionaAgenteSospechoso <http://text2kg/chile/memoria#Persona/coronel_Cook>,
+        <http://text2kg/chile/memoria#Persona/el_capit%C3%A1n>,
+        <http://text2kg/chile/memoria#Persona/el_coronel_Cook>,
+        <http://text2kg/chile/memoria#Persona/el_coronel_Edgar_Ceballos_Jones>,
+        <http://text2kg/chile/memoria#Persona/el_general_Bachelet>,
+        <http://text2kg/chile/memoria#Persona/el_general_Caro>,
+        <http://text2kg/chile/memoria#Persona/el_general_Carol_Urz%C3%BAa>,
+        <http://text2kg/chile/memoria#Persona/el_general_Enrique_Ruiz_Bunguer>,
+        <http://text2kg/chile/memoria#Persona/el_nieto_del_asesinado_general_Prats>,
+        <http://text2kg/chile/memoria#Persona/el_teniente> ;
+    chile:mencionaLugarOficial <http://text2kg/chile/memoria#Lugar/Escuela_Militar>,
+        <http://text2kg/chile/memoria#Lugar/Estadio_Nacional>,
+        <http://text2kg/chile/memoria#Lugar/Vicar%C3%ADa_de_la_Solidaridad> ;
+    chile:mencionaLugarRepresivoDetectado <http://text2kg/chile/memoria#Lugar/Base_A%C3%A9rea>,
+        <http://text2kg/chile/memoria#Lugar/Base_A%C3%A9rea_de_Cerrillos>,
+        <http://text2kg/chile/memoria#Lugar/Base_A%C3%A9rea_de_El_Bosque>,
+        <http://text2kg/chile/memoria#Lugar/Base_de_Colina>,
+        <http://text2kg/chile/memoria#Lugar/C%C3%A1rcel_de_Alta_Seguridad>,
+        <http://text2kg/chile/memoria#Lugar/Cementerio_General>,
+        <http://text2kg/chile/memoria#Lugar/Memorial_del_Detenido_Desaparecido_y_del_Ejecutado_Pol%C3%ADtico>,
+        <http://text2kg/chile/memoria#Lugar/Museo_de_la_Memoria>,
+        <http://text2kg/chile/memoria#Lugar/Zona_Fin_de_la_Dictadura>,
+        <http://text2kg/chile/memoria#Lugar/algunos_lugares_donde_hab%C3%ADan_sido_enterrados_detenidos_desaparecidos>,
+        <http://text2kg/chile/memoria#Lugar/c%C3%A1rcel_de_Angol>,
+        <http://text2kg/chile/memoria#Lugar/c%C3%A1rceles_clandestinas>,
+        <http://text2kg/chile/memoria#Lugar/calabozo_de_la_calle_Dieciocho>,
+        <http://text2kg/chile/memoria#Lugar/casa_de_seguridad>,
+        <http://text2kg/chile/memoria#Lugar/centro_de_detenci%C3%B3n>,
+        <http://text2kg/chile/memoria#Lugar/centros_de_detenci%C3%B3n>,
+        <http://text2kg/chile/memoria#Lugar/comisar%C3%ADas>,
+        <http://text2kg/chile/memoria#Lugar/cualquier_c%C3%A1rcel_clandestina>,
+        <http://text2kg/chile/memoria#Lugar/cuartel_clandestino>,
+        <http://text2kg/chile/memoria#Lugar/cuartel_en_la_calle_Dieciocho>,
+        <http://text2kg/chile/memoria#Lugar/cuarteles_clandestinos>,
+        <http://text2kg/chile/memoria#Lugar/el_Museo_de_la_Memoria>,
+        <http://text2kg/chile/memoria#Lugar/el_Museo_de_la_Memoria_y_los_Derechos_Humanos_de_Chile>,
+        <http://text2kg/chile/memoria#Lugar/el_centro_de_detenci%C3%B3n>,
+        <http://text2kg/chile/memoria#Lugar/el_cuartel>,
+        <http://text2kg/chile/memoria#Lugar/el_cuartel_de_la_calle_Dieciocho>,
+        <http://text2kg/chile/memoria#Lugar/el_memorial>,
+        <http://text2kg/chile/memoria#Lugar/el_memorial_ex_Nido_20>,
+        <http://text2kg/chile/memoria#Lugar/la_Zona_Ausencia_y_Memoria>,
+        <http://text2kg/chile/memoria#Lugar/la_Zona_Lucha_por_la_Libertad>,
+        <http://text2kg/chile/memoria#Lugar/la_Zona_de_los_Torturadores>,
+        <http://text2kg/chile/memoria#Lugar/la_c%C3%A1rcel_clandestina>,
+        <http://text2kg/chile/memoria#Lugar/la_calle_Teniente_Merino_de_La_Florida>,
+        <http://text2kg/chile/memoria#Lugar/la_puerta_de_la_exc%C3%A1rcel_p%C3%BAblica>,
+        <http://text2kg/chile/memoria#Lugar/la_torre_de_vigilancia_del_centro_de_detenci%C3%B3n_y_tortura_de_la_calle_Rep%C3%BAblica>,
+        <http://text2kg/chile/memoria#Lugar/lugar_del_memorial>,
+        <http://text2kg/chile/memoria#Lugar/memorial>,
+        <http://text2kg/chile/memoria#Lugar/pieza_de_las_torturas>,
+        <http://text2kg/chile/memoria#Lugar/recintos_de_detenci%C3%B3n>,
+        <http://text2kg/chile/memoria#Lugar/sala_de_interrogatorios>,
+        <http://text2kg/chile/memoria#Lugar/un_centro_de_detenci%C3%B3n> ;
+    chile:mencionaViolenciaRepresiva <http://text2kg/chile/memoria#Violencia/Mueren_en_espectacular_balacera_extremistas_asesinos_del_general_Carol_Urz%C3%BAa>,
+        <http://text2kg/chile/memoria#Violencia/centro_de_detenci%C3%B3n_clandestino>,
+        <http://text2kg/chile/memoria#Violencia/centro_de_detenci%C3%B3n_y_tortura>,
+        <http://text2kg/chile/memoria#Violencia/compasi%C3%B3n_por_la_mujer_y_los_hijos_del_hombre_que_torturaba>,
+        <http://text2kg/chile/memoria#Violencia/cuerpo_ensangrentado>,
+        <http://text2kg/chile/memoria#Violencia/dejan_que_sus_cuerpos_se_desangren_en_el_suelo>,
+        <http://text2kg/chile/memoria#Violencia/desaparecidos>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_los_prisioneros>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_los_seres_queridos>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_del_cuerpo>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_del_hermano_de_Jos%C3%A9>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_forzada>,
+        <http://text2kg/chile/memoria#Violencia/destino_final_de_doscientos_detenidos_desaparecidos>,
+        <http://text2kg/chile/memoria#Violencia/detenci%C3%B3n>,
+        <http://text2kg/chile/memoria#Violencia/detenidos_desaparecidos>,
+        <http://text2kg/chile/memoria#Violencia/ensangrentados_y_deformes>,
+        <http://text2kg/chile/memoria#Violencia/enterrado_en_una_fosa>,
+        <http://text2kg/chile/memoria#Violencia/escenas_de_detenci%C3%B3n>,
+        <http://text2kg/chile/memoria#Violencia/golpes>,
+        <http://text2kg/chile/memoria#Violencia/golpes_el%C3%A9ctricos>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_el_est%C3%B3mago>,
+        <http://text2kg/chile/memoria#Violencia/gritos_que_sal%C3%ADan_de_las_sesiones_de_tortura>,
+        <http://text2kg/chile/memoria#Violencia/interrogaron_y_torturaron_hasta_muy_tarde_en_la_noche>,
+        <http://text2kg/chile/memoria#Violencia/interrogatorio_de_Jos%C3%A9_fue_uno_de_los_m%C3%A1s_duros>,
+        <http://text2kg/chile/memoria#Violencia/interrogatorios>,
+        <http://text2kg/chile/memoria#Violencia/interrogatorios_y_la_tortura>,
+        <http://text2kg/chile/memoria#Violencia/los_ojos_vendados>,
+        <http://text2kg/chile/memoria#Violencia/m%C3%A9todos_de_tortura>,
+        <http://text2kg/chile/memoria#Violencia/manchas_de_sangre_del_asesinato>,
+        <http://text2kg/chile/memoria#Violencia/olfateaba_la_sangre>,
+        <http://text2kg/chile/memoria#Violencia/pantalones_manchados_de_sangre>,
+        <http://text2kg/chile/memoria#Violencia/pantalones_sucios_de_sangre>,
+        <http://text2kg/chile/memoria#Violencia/parrillas_el%C3%A9ctricas>,
+        <http://text2kg/chile/memoria#Violencia/rudeza_de_los_golpes>,
+        <http://text2kg/chile/memoria#Violencia/se_desangraba_en_el_suelo_de_ese_cuartel>,
+        <http://text2kg/chile/memoria#Violencia/secuestro>,
+        <http://text2kg/chile/memoria#Violencia/secuestros>,
+        <http://text2kg/chile/memoria#Violencia/sesi%C3%B3n_de_tortura>,
+        <http://text2kg/chile/memoria#Violencia/sesiones_de_tortura>,
+        <http://text2kg/chile/memoria#Violencia/sometidos_a_tortura>,
+        <http://text2kg/chile/memoria#Violencia/testimonio_brutal_de_lo_que_hab%C3%ADa_hecho_como_agente_de_inteligencia>,
+        <http://text2kg/chile/memoria#Violencia/testimonios_de_secuestro>,
+        <http://text2kg/chile/memoria#Violencia/tortura>,
+        <http://text2kg/chile/memoria#Violencia/torturaba>,
+        <http://text2kg/chile/memoria#Violencia/torturado_y_asesinado>,
+        <http://text2kg/chile/memoria#Violencia/torturando_gente>,
+        <http://text2kg/chile/memoria#Violencia/torturar>,
+        <http://text2kg/chile/memoria#Violencia/torturarlos_durante_el_d%C3%ADa_y_la_noche>,
+        <http://text2kg/chile/memoria#Violencia/torturaron>,
+        <http://text2kg/chile/memoria#Violencia/torturas>,
+        <http://text2kg/chile/memoria#Violencia/trasladarlos_a_sus_sesiones_de_tortura>,
+        <http://text2kg/chile/memoria#Violencia/treinta_golpes>,
+        <http://text2kg/chile/memoria#Violencia/vigilancia_de_Jos%C3%A9> .
+
+<http://text2kg/chile/memoria#Texto/Loco_afan_cronicas_de_sidario_Pedro_Lemebel> a chile:Texto ;
+    rdfs:label "Loco afán: crónicas de sidario"@es ;
+    dcterms:creator "Pedro Lemebel" ;
+    chile:mencionaAgenteSospechoso <http://text2kg/chile/memoria#Persona/el_capit%C3%A1n>,
+        <http://text2kg/chile/memoria#Persona/el_sargento>,
+        <http://text2kg/chile/memoria#Persona/el_teniente>,
+        <http://text2kg/chile/memoria#Persona/subcomandante> ;
+    chile:mencionaLugarOficial <http://text2kg/chile/memoria#Lugar/Escuela_Militar> ;
+    chile:mencionaLugarRepresivoDetectado <http://text2kg/chile/memoria#Lugar/comisar%C3%ADa>,
+        <http://text2kg/chile/memoria#Lugar/cuarteles>,
+        <http://text2kg/chile/memoria#Lugar/cuarteles_de_invierno>,
+        <http://text2kg/chile/memoria#Lugar/el_Tropicana>,
+        <http://text2kg/chile/memoria#Lugar/el_mapa_vigilante>,
+        <http://text2kg/chile/memoria#Lugar/fosa_com%C3%BAn>,
+        <http://text2kg/chile/memoria#Lugar/la_casa_del_comandante_en_jefe>,
+        <http://text2kg/chile/memoria#Lugar/la_pasada_dictadura>,
+        <http://text2kg/chile/memoria#Lugar/los_paseos_reci%C3%A9n_inaugurados_de_la_dictadura>,
+        <http://text2kg/chile/memoria#Lugar/regimiento> ;
+    chile:mencionaViolenciaRepresiva <http://text2kg/chile/memoria#Violencia/brochazos_de_sangre>,
+        <http://text2kg/chile/memoria#Violencia/c%C3%A1rcel_donde_pas%C3%A9_dos_a%C3%B1os_sin_ver_el_afuera>,
+        <http://text2kg/chile/memoria#Violencia/cad%C3%A1veres_de_boca_enroscados_a_sus_verdugos>,
+        <http://text2kg/chile/memoria#Violencia/captura>,
+        <http://text2kg/chile/memoria#Violencia/como_la_dictadura>,
+        <http://text2kg/chile/memoria#Violencia/dedos_con_sangre_limpiados_en_la_muralla>,
+        <http://text2kg/chile/memoria#Violencia/desaparecidos>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_bajo_el_estigma_de_Kaposi>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_casi_todas_las_locas>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_del_cuerpo>,
+        <http://text2kg/chile/memoria#Violencia/el_tufo_mortuorio_de_la_dictadura>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_el_est%C3%B3mago>,
+        <http://text2kg/chile/memoria#Violencia/marcas_de_ese_rouge_violento>,
+        <http://text2kg/chile/memoria#Violencia/torturas>,
+        <http://text2kg/chile/memoria#Violencia/tufo_mortuorio_de_la_dictadura>,
+        <http://text2kg/chile/memoria#Violencia/v%C3%B3mito_de_sangre> .
+
+<http://text2kg/chile/memoria#Texto/Nocturno_de_Chile_Roberto_Bolano> a chile:Texto ;
+    rdfs:label "Nocturno de Chile"@es ;
+    dcterms:creator "Roberto Bolaño" ;
+    chile:mencionaAgenteSospechoso <http://text2kg/chile/memoria#Persona/coronel_P%C3%A9rez_Larouche>,
+        <http://text2kg/chile/memoria#Persona/el_almirante_Merino>,
+        <http://text2kg/chile/memoria#Persona/el_capit%C3%A1n>,
+        <http://text2kg/chile/memoria#Persona/el_capit%C3%A1n_J%C3%BCnger>,
+        <http://text2kg/chile/memoria#Persona/el_coronel>,
+        <http://text2kg/chile/memoria#Persona/el_coronel_P%C3%A9rez_Larouche>,
+        <http://text2kg/chile/memoria#Persona/el_general>,
+        <http://text2kg/chile/memoria#Persona/el_general_Leigh>,
+        <http://text2kg/chile/memoria#Persona/el_general_Mendoza>,
+        <http://text2kg/chile/memoria#Persona/el_general_Pinochet>,
+        <http://text2kg/chile/memoria#Persona/general_Mendoza>,
+        <http://text2kg/chile/memoria#Persona/general_Pinochet>,
+        <http://text2kg/chile/memoria#Persona/los_coroneles>,
+        <http://text2kg/chile/memoria#Persona/los_generales>,
+        <http://text2kg/chile/memoria#Persona/los_generales_retirados>,
+        <http://text2kg/chile/memoria#Persona/un_capit%C3%A1n_de_la_Marina>,
+        <http://text2kg/chile/memoria#Persona/un_general_de_la_Fuerza_A%C3%A9rea> ;
+    chile:mencionaViolenciaRepresiva <http://text2kg/chile/memoria#Violencia/cuerpecillos_ensangrentados_de_varias_palomas>,
+        <http://text2kg/chile/memoria#Violencia/el_revolotear_de_los_estorninos_se_ensangrentaba>,
+        <http://text2kg/chile/memoria#Violencia/interrogatorios>,
+        <http://text2kg/chile/memoria#Violencia/mataron_a_un_general_del_ej%C3%A9rcito_favorable_a_Allende>,
+        <http://text2kg/chile/memoria#Violencia/se_fragmentaba_y_se_ensangrentaba> .
+
+<http://text2kg/chile/memoria#Texto/Purgatorio_Raul_Zurita> a chile:Texto ;
+    rdfs:label "Purgatorio"@es ;
+    dcterms:creator "Raúl Zurita" ;
+    chile:mencionaAgenteSospechoso <http://text2kg/chile/memoria#Persona/el_capit%C3%A1n> .
+
+<http://text2kg/chile/memoria#Texto/Tengo_miedo_torero_Pedro_Lemebel> a chile:Texto ;
+    rdfs:label "Tengo miedo torero"@es ;
+    dcterms:creator "Pedro Lemebel" ;
+    chile:mencionaAgenteSospechoso <http://text2kg/chile/memoria#Persona/General>,
+        <http://text2kg/chile/memoria#Persona/el_General>,
+        <http://text2kg/chile/memoria#Persona/el_almirante_Urrutia>,
+        <http://text2kg/chile/memoria#Persona/el_capit%C3%A1n>,
+        <http://text2kg/chile/memoria#Persona/el_coronel_Abarz%C3%BAa>,
+        <http://text2kg/chile/memoria#Persona/el_general>,
+        <http://text2kg/chile/memoria#Persona/el_general_Ort%C3%BAzar>,
+        <http://text2kg/chile/memoria#Persona/el_sargento>,
+        <http://text2kg/chile/memoria#Persona/general_Ort%C3%BAzar>,
+        <http://text2kg/chile/memoria#Persona/los_generales>,
+        <http://text2kg/chile/memoria#Persona/mi_General>,
+        <http://text2kg/chile/memoria#Persona/mi_comandante>,
+        <http://text2kg/chile/memoria#Persona/mi_general> ;
+    chile:mencionaLugarOficial <http://text2kg/chile/memoria#Lugar/Escuela_Militar>,
+        <http://text2kg/chile/memoria#Lugar/Estadio_Nacional>,
+        <http://text2kg/chile/memoria#Lugar/Vicar%C3%ADa_de_la_Solidaridad> ;
+    chile:mencionaLugarRepresivoDetectado <http://text2kg/chile/memoria#Lugar/el_cementerio_general>,
+        <http://text2kg/chile/memoria#Lugar/el_espacioso_recinto>,
+        <http://text2kg/chile/memoria#Lugar/el_regimiento>,
+        <http://text2kg/chile/memoria#Lugar/la_caseta_de_vigilancia> ;
+    chile:mencionaViolenciaRepresiva <http://text2kg/chile/memoria#Violencia/desaparecido>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_del_cuerpo>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_en_los_vericuetos_del_enorme_Parlamento>,
+        <http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_en_una_fumarola_de_tierra>,
+        <http://text2kg/chile/memoria#Violencia/golpes_apresurados>,
+        <http://text2kg/chile/memoria#Violencia/golpes_de_la_puerta>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_el_coraz%C3%B3n>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_el_est%C3%B3mago>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_la_puerta>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_las_espaldas>,
+        <http://text2kg/chile/memoria#Violencia/golpes_en_los_cr%C3%A1neos>,
+        <http://text2kg/chile/memoria#Violencia/interrogatorio>,
+        <http://text2kg/chile/memoria#Violencia/nube_%C3%A1cida_de_la_represi%C3%B3n>,
+        <http://text2kg/chile/memoria#Violencia/sangre_que_se_limpiaban_en_la_carpeta>,
+        <http://text2kg/chile/memoria#Violencia/sangre_y_hematomas_acrob%C3%A1ticos>,
+        <http://text2kg/chile/memoria#Violencia/sobrevivencia_aporreada_de_la_dictadura>,
+        <http://text2kg/chile/memoria#Violencia/susto_cotidiano_de_la_dictadura>,
+        <http://text2kg/chile/memoria#Violencia/torturan>,
+        <http://text2kg/chile/memoria#Violencia/vigilando_en_el_ba%C3%B1o_personal> .
+
+<http://text2kg/chile/memoria#Lugar/Avenida_General_Bulnes> a chile:Lugar ;
+    rdfs:label "Avenida General Bulnes"@es .
+
+<http://text2kg/chile/memoria#Lugar/Base_A%C3%A9rea> a chile:Lugar ;
+    rdfs:label "Base Aérea"@es .
+
+<http://text2kg/chile/memoria#Lugar/Base_A%C3%A9rea_de_Cerrillos> a chile:Lugar ;
+    rdfs:label "Base Aérea de Cerrillos"@es .
+
+<http://text2kg/chile/memoria#Lugar/Base_A%C3%A9rea_de_El_Bosque> a chile:Lugar ;
+    rdfs:label "Base Aérea de El Bosque"@es .
+
+<http://text2kg/chile/memoria#Lugar/Base_de_Colina> a chile:Lugar ;
+    rdfs:label "Base de Colina"@es .
+
+<http://text2kg/chile/memoria#Lugar/C%C3%A1rcel_de_Alta_Seguridad> a chile:Lugar ;
+    rdfs:label "Cárcel de Alta Seguridad"@es .
+
+<http://text2kg/chile/memoria#Lugar/Memorial_del_Detenido_Desaparecido_y_del_Ejecutado_Pol%C3%ADtico> a chile:Lugar ;
+    rdfs:label "Memorial del Detenido Desaparecido y del Ejecutado Político"@es .
+
+<http://text2kg/chile/memoria#Lugar/Ministerio_de_Defensa> a chile:Lugar ;
+    rdfs:label "Ministerio de Defensa"@es .
+
+<http://text2kg/chile/memoria#Lugar/Museo_de_la_Memoria> a chile:Lugar ;
+    rdfs:label "Museo de la Memoria"@es .
+
+<http://text2kg/chile/memoria#Lugar/Regimiento_de_San_Felipe> a chile:Lugar ;
+    rdfs:label "Regimiento de San Felipe"@es .
+
+<http://text2kg/chile/memoria#Lugar/Revista_de_los_Vigilantes_Nocturnos_de_Arras> a chile:Lugar ;
+    rdfs:label "Revista de los Vigilantes Nocturnos de Arras"@es .
+
+<http://text2kg/chile/memoria#Lugar/Zona_Fin_de_la_Dictadura> a chile:Lugar ;
+    rdfs:label "Zona Fin de la Dictadura"@es .
+
+<http://text2kg/chile/memoria#Lugar/aer%C3%B3dromo_Capit%C3%A1n_Lindstrom> a chile:Lugar ;
+    rdfs:label "aeródromo Capitán Lindstrom"@es .
+
+<http://text2kg/chile/memoria#Lugar/algunos_lugares_donde_hab%C3%ADan_sido_enterrados_detenidos_desaparecidos> a chile:Lugar ;
+    rdfs:label "algunos lugares donde habían sido enterrados detenidos desaparecidos"@es .
+
+<http://text2kg/chile/memoria#Lugar/c%C3%A1rcel_de_Angol> a chile:Lugar ;
+    rdfs:label "cárcel de Angol"@es .
+
+<http://text2kg/chile/memoria#Lugar/c%C3%A1rceles_clandestinas> a chile:Lugar ;
+    rdfs:label "cárceles clandestinas"@es .
+
+<http://text2kg/chile/memoria#Lugar/calabozo_de_la_calle_Dieciocho> a chile:Lugar ;
+    rdfs:label "calabozo de la calle Dieciocho"@es .
+
+<http://text2kg/chile/memoria#Lugar/campo_de_concentraci%C3%B3n> a chile:Lugar ;
+    rdfs:label "campo de concentración"@es .
+
+<http://text2kg/chile/memoria#Lugar/casa_de_seguridad> a chile:Lugar ;
+    rdfs:label "casa de seguridad"@es .
+
+<http://text2kg/chile/memoria#Lugar/centro_de_detenci%C3%B3n> a chile:Lugar ;
+    rdfs:label "centro de detención"@es .
+
+<http://text2kg/chile/memoria#Lugar/centros_de_detenci%C3%B3n> a chile:Lugar ;
+    rdfs:label "centros de detención"@es .
+
+<http://text2kg/chile/memoria#Lugar/comisar%C3%ADa> a chile:Lugar ;
+    rdfs:label "comisaría"@es .
+
+<http://text2kg/chile/memoria#Lugar/comisar%C3%ADas> a chile:Lugar ;
+    rdfs:label "comisarías"@es .
+
+<http://text2kg/chile/memoria#Lugar/cualquier_c%C3%A1rcel_clandestina> a chile:Lugar ;
+    rdfs:label "cualquier cárcel clandestina"@es .
+
+<http://text2kg/chile/memoria#Lugar/cuartel_clandestino> a chile:Lugar ;
+    rdfs:label "cuartel clandestino"@es .
+
+<http://text2kg/chile/memoria#Lugar/cuartel_en_la_calle_Dieciocho> a chile:Lugar ;
+    rdfs:label "cuartel en la calle Dieciocho"@es .
+
+<http://text2kg/chile/memoria#Lugar/cuarteles> a chile:Lugar ;
+    rdfs:label "cuarteles"@es .
+
+<http://text2kg/chile/memoria#Lugar/cuarteles_clandestinos> a chile:Lugar ;
+    rdfs:label "cuarteles clandestinos"@es .
+
+<http://text2kg/chile/memoria#Lugar/cuarteles_de_invierno> a chile:Lugar ;
+    rdfs:label "cuarteles de invierno"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_Capit%C3%A1n_Lindstrom> a chile:Lugar ;
+    rdfs:label "el Capitán Lindstrom"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_Museo_de_la_Memoria> a chile:Lugar ;
+    rdfs:label "el Museo de la Memoria"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_Museo_de_la_Memoria_y_los_Derechos_Humanos_de_Chile> a chile:Lugar ;
+    rdfs:label "el Museo de la Memoria y los Derechos Humanos de Chile"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_Tropicana> a chile:Lugar ;
+    rdfs:label "el Tropicana"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_cementerio_general> a chile:Lugar ;
+    rdfs:label "el cementerio general"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_centro_de_detenci%C3%B3n> a chile:Lugar ;
+    rdfs:label "el centro de detención"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_cuartel> a chile:Lugar ;
+    rdfs:label "el cuartel"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_cuartel_de_la_calle_Dieciocho> a chile:Lugar ;
+    rdfs:label "el cuartel de la calle Dieciocho"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_cuarto_de_la_v%C3%ADctima> a chile:Lugar ;
+    rdfs:label "el cuarto de la víctima"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_espacioso_recinto> a chile:Lugar ;
+    rdfs:label "el espacioso recinto"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_mapa_vigilante> a chile:Lugar ;
+    rdfs:label "el mapa vigilante"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_memorial> a chile:Lugar ;
+    rdfs:label "el memorial"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_memorial_ex_Nido_20> a chile:Lugar ;
+    rdfs:label "el memorial ex Nido 20"@es .
+
+<http://text2kg/chile/memoria#Lugar/el_regimiento> a chile:Lugar ;
+    rdfs:label "el regimiento"@es .
+
+<http://text2kg/chile/memoria#Lugar/fosa_com%C3%BAn> a chile:Lugar ;
+    rdfs:label "fosa común"@es .
+
+<http://text2kg/chile/memoria#Lugar/la_Zona_Ausencia_y_Memoria> a chile:Lugar ;
+    rdfs:label "la Zona Ausencia y Memoria"@es .
+
+<http://text2kg/chile/memoria#Lugar/la_Zona_Lucha_por_la_Libertad> a chile:Lugar ;
+    rdfs:label "la Zona Lucha por la Libertad"@es .
+
+<http://text2kg/chile/memoria#Lugar/la_Zona_de_los_Torturadores> a chile:Lugar ;
+    rdfs:label "la Zona de los Torturadores"@es .
+
+<http://text2kg/chile/memoria#Lugar/la_base_Arturo_Prat> a chile:Lugar ;
+    rdfs:label "la base Arturo Prat"@es .
+
+<http://text2kg/chile/memoria#Lugar/la_base_ant%C3%A1rtica_de_Arturo_Prat> a chile:Lugar ;
+    rdfs:label "la base antártica de Arturo Prat"@es .
+
+<http://text2kg/chile/memoria#Lugar/la_c%C3%A1rcel_clandestina> a chile:Lugar ;
+    rdfs:label "la cárcel clandestina"@es .
+
+<http://text2kg/chile/memoria#Lugar/la_calle_Teniente_Merino_de_La_Florida> a chile:Lugar ;
+    rdfs:label "la calle Teniente Merino de La Florida"@es .
+
+<http://text2kg/chile/memoria#Lugar/la_casa_del_comandante_en_jefe> a chile:Lugar ;
+    rdfs:label "la casa del comandante en jefe"@es .
+
+<http://text2kg/chile/memoria#Lugar/la_caseta_de_vigilancia> a chile:Lugar ;
+    rdfs:label "la caseta de vigilancia"@es .
+
+<http://text2kg/chile/memoria#Lugar/la_pasada_dictadura> a chile:Lugar ;
+    rdfs:label "la pasada dictadura"@es .
+
+<http://text2kg/chile/memoria#Lugar/la_puerta_de_la_exc%C3%A1rcel_p%C3%BAblica> a chile:Lugar ;
+    rdfs:label "la puerta de la excárcel pública"@es .
+
+<http://text2kg/chile/memoria#Lugar/la_torre_de_vigilancia_del_centro_de_detenci%C3%B3n_y_tortura_de_la_calle_Rep%C3%BAblica> a chile:Lugar ;
+    rdfs:label "la torre de vigilancia del centro de detención y tortura de la calle República"@es .
+
+<http://text2kg/chile/memoria#Lugar/las_c%C3%A1rceles_de_las_ciudades> a chile:Lugar ;
+    rdfs:label "las cárceles de las ciudades"@es .
+
+<http://text2kg/chile/memoria#Lugar/los_cuarteles> a chile:Lugar ;
+    rdfs:label "los cuarteles"@es .
+
+<http://text2kg/chile/memoria#Lugar/los_paseos_reci%C3%A9n_inaugurados_de_la_dictadura> a chile:Lugar ;
+    rdfs:label "los paseos recién inaugurados de la dictadura"@es .
+
+<http://text2kg/chile/memoria#Lugar/lugar_del_memorial> a chile:Lugar ;
+    rdfs:label "lugar del memorial"@es .
+
+<http://text2kg/chile/memoria#Lugar/memorial> a chile:Lugar ;
+    rdfs:label "memorial"@es .
+
+<http://text2kg/chile/memoria#Lugar/patio_de_un_regimiento> a chile:Lugar ;
+    rdfs:label "patio de un regimiento"@es .
+
+<http://text2kg/chile/memoria#Lugar/pieza_de_las_torturas> a chile:Lugar ;
+    rdfs:label "pieza de las torturas"@es .
+
+<http://text2kg/chile/memoria#Lugar/recinto_de_tortura> a chile:Lugar ;
+    rdfs:label "recinto de tortura"@es .
+
+<http://text2kg/chile/memoria#Lugar/recintos_de_detenci%C3%B3n> a chile:Lugar ;
+    rdfs:label "recintos de detención"@es .
+
+<http://text2kg/chile/memoria#Lugar/regimiento> a chile:Lugar ;
+    rdfs:label "regimiento"@es .
+
+<http://text2kg/chile/memoria#Lugar/sala_de_interrogatorios> a chile:Lugar ;
+    rdfs:label "sala de interrogatorios"@es .
+
+<http://text2kg/chile/memoria#Lugar/un_centro_de_detenci%C3%B3n> a chile:Lugar ;
+    rdfs:label "un centro de detención"@es .
+
+<http://text2kg/chile/memoria#Persona/General> a chile:Persona ;
+    rdfs:label "General"@es .
+
+<http://text2kg/chile/memoria#Persona/comandante_Aquiles> a chile:Persona ;
+    rdfs:label "comandante Aquiles"@es .
+
+<http://text2kg/chile/memoria#Persona/comandante_H%C3%A9ctor> a chile:Persona ;
+    rdfs:label "comandante Héctor"@es .
+
+<http://text2kg/chile/memoria#Persona/comandante_Paris> a chile:Persona ;
+    rdfs:label "comandante Paris"@es .
+
+<http://text2kg/chile/memoria#Persona/comandante_Patroclo> a chile:Persona ;
+    rdfs:label "comandante Patroclo"@es .
+
+<http://text2kg/chile/memoria#Persona/comandante_Ulises> a chile:Persona ;
+    rdfs:label "comandante Ulises"@es .
+
+<http://text2kg/chile/memoria#Persona/coronel_Cook> a chile:Persona ;
+    rdfs:label "coronel Cook"@es .
+
+<http://text2kg/chile/memoria#Persona/coronel_Garc%C3%ADa> a chile:Persona ;
+    rdfs:label "coronel García"@es .
+
+<http://text2kg/chile/memoria#Persona/coronel_P%C3%A9rez_Larouche> a chile:Persona ;
+    rdfs:label "coronel Pérez Larouche"@es .
+
+<http://text2kg/chile/memoria#Persona/el_General> a chile:Persona ;
+    rdfs:label "el General"@es .
+
+<http://text2kg/chile/memoria#Persona/el_almirante_Merino> a chile:Persona ;
+    rdfs:label "el almirante Merino"@es .
+
+<http://text2kg/chile/memoria#Persona/el_almirante_Urrutia> a chile:Persona ;
+    rdfs:label "el almirante Urrutia"@es .
+
+<http://text2kg/chile/memoria#Persona/el_capit%C3%A1n_J%C3%BCnger> a chile:Persona ;
+    rdfs:label "el capitán Jünger"@es .
+
+<http://text2kg/chile/memoria#Persona/el_capit%C3%A1n_Lindstrom> a chile:Persona ;
+    rdfs:label "el capitán Lindstrom"@es .
+
+<http://text2kg/chile/memoria#Persona/el_comandante_Hurtado> a chile:Persona ;
+    rdfs:label "el comandante Hurtado"@es .
+
+<http://text2kg/chile/memoria#Persona/el_coronel_Abarz%C3%BAa> a chile:Persona ;
+    rdfs:label "el coronel Abarzúa"@es .
+
+<http://text2kg/chile/memoria#Persona/el_coronel_Cook> a chile:Persona ;
+    rdfs:label "el coronel Cook"@es .
+
+<http://text2kg/chile/memoria#Persona/el_coronel_Edgar_Ceballos_Jones> a chile:Persona ;
+    rdfs:label "el coronel Edgar Ceballos Jones"@es .
+
+<http://text2kg/chile/memoria#Persona/el_coronel_Garc%C3%ADa> a chile:Persona ;
+    rdfs:label "el coronel García"@es .
+
+<http://text2kg/chile/memoria#Persona/el_coronel_Hurtado> a chile:Persona ;
+    rdfs:label "el coronel Hurtado"@es .
+
+<http://text2kg/chile/memoria#Persona/el_coronel_P%C3%A9rez_Larouche> a chile:Persona ;
+    rdfs:label "el coronel Pérez Larouche"@es .
+
+<http://text2kg/chile/memoria#Persona/el_general_Bachelet> a chile:Persona ;
+    rdfs:label "el general Bachelet"@es .
+
+<http://text2kg/chile/memoria#Persona/el_general_Caro> a chile:Persona ;
+    rdfs:label "el general Caro"@es .
+
+<http://text2kg/chile/memoria#Persona/el_general_Carol_Urz%C3%BAa> a chile:Persona ;
+    rdfs:label "el general Carol Urzúa"@es .
+
+<http://text2kg/chile/memoria#Persona/el_general_Cherniakovski> a chile:Persona ;
+    rdfs:label "el general Cherniakovski"@es .
+
+<http://text2kg/chile/memoria#Persona/el_general_Enrique_Ruiz_Bunguer> a chile:Persona ;
+    rdfs:label "el general Enrique Ruiz Bunguer"@es .
+
+<http://text2kg/chile/memoria#Persona/el_general_Hurtado> a chile:Persona ;
+    rdfs:label "el general Hurtado"@es .
+
+<http://text2kg/chile/memoria#Persona/el_general_Leigh> a chile:Persona ;
+    rdfs:label "el general Leigh"@es .
+
+<http://text2kg/chile/memoria#Persona/el_general_Mendoza> a chile:Persona ;
+    rdfs:label "el general Mendoza"@es .
+
+<http://text2kg/chile/memoria#Persona/el_general_Ort%C3%BAzar> a chile:Persona ;
+    rdfs:label "el general Ortúzar"@es .
+
+<http://text2kg/chile/memoria#Persona/el_general_Pinochet> a chile:Persona ;
+    rdfs:label "el general Pinochet"@es .
+
+<http://text2kg/chile/memoria#Persona/el_general_de_los_carabineros> a chile:Persona ;
+    rdfs:label "el general de los carabineros"@es .
+
+<http://text2kg/chile/memoria#Persona/el_nieto_del_asesinado_general_Prats> a chile:Persona ;
+    rdfs:label "el nieto del asesinado general Prats"@es .
+
+<http://text2kg/chile/memoria#Persona/el_teniente_de_la_Fuerza_A%C3%A9rea> a chile:Persona ;
+    rdfs:label "el teniente de la Fuerza Aérea"@es .
+
+<http://text2kg/chile/memoria#Persona/general_Hurtado> a chile:Persona ;
+    rdfs:label "general Hurtado"@es .
+
+<http://text2kg/chile/memoria#Persona/general_Mendoza> a chile:Persona ;
+    rdfs:label "general Mendoza"@es .
+
+<http://text2kg/chile/memoria#Persona/general_Ort%C3%BAzar> a chile:Persona ;
+    rdfs:label "general Ortúzar"@es .
+
+<http://text2kg/chile/memoria#Persona/general_Pinochet> a chile:Persona ;
+    rdfs:label "general Pinochet"@es .
+
+<http://text2kg/chile/memoria#Persona/los_generales_retirados> a chile:Persona ;
+    rdfs:label "los generales retirados"@es .
+
+<http://text2kg/chile/memoria#Persona/mi_General> a chile:Persona ;
+    rdfs:label "mi General"@es .
+
+<http://text2kg/chile/memoria#Persona/mi_comandante> a chile:Persona ;
+    rdfs:label "mi comandante"@es .
+
+<http://text2kg/chile/memoria#Persona/mi_general> a chile:Persona ;
+    rdfs:label "mi general"@es .
+
+<http://text2kg/chile/memoria#Persona/subcomandante> a chile:Persona ;
+    rdfs:label "subcomandante"@es .
+
+<http://text2kg/chile/memoria#Persona/un_capit%C3%A1n_de_la_Marina> a chile:Persona ;
+    rdfs:label "un capitán de la Marina"@es .
+
+<http://text2kg/chile/memoria#Persona/un_coronel> a chile:Persona ;
+    rdfs:label "un coronel"@es .
+
+<http://text2kg/chile/memoria#Persona/un_general_de_la_Fuerza_A%C3%A9rea> a chile:Persona ;
+    rdfs:label "un general de la Fuerza Aérea"@es .
+
+<http://text2kg/chile/memoria#Persona/uno_de_los_tenientes> a chile:Persona ;
+    rdfs:label "uno de los tenientes"@es .
+
+<http://text2kg/chile/memoria#Violencia/Mueren_en_espectacular_balacera_extremistas_asesinos_del_general_Carol_Urz%C3%BAa> a chile:Violencia ;
+    rdfs:label "Mueren en espectacular balacera extremistas asesinos del general Carol Urzúa"@es .
+
+<http://text2kg/chile/memoria#Violencia/aislamiento> a chile:Violencia ;
+    rdfs:label "aislamiento"@es .
+
+<http://text2kg/chile/memoria#Violencia/ba%C3%B1ada_en_su_propia_sangre> a chile:Violencia ;
+    rdfs:label "bañada en su propia sangre"@es .
+
+<http://text2kg/chile/memoria#Violencia/brochazos_de_sangre> a chile:Violencia ;
+    rdfs:label "brochazos de sangre"@es .
+
+<http://text2kg/chile/memoria#Violencia/broto_un_oscuro_hilo_de_sangre> a chile:Violencia ;
+    rdfs:label "broto un oscuro hilo de sangre"@es .
+
+<http://text2kg/chile/memoria#Violencia/c%C3%A1rcel_donde_pas%C3%A9_dos_a%C3%B1os_sin_ver_el_afuera> a chile:Violencia ;
+    rdfs:label "cárcel donde pasé dos años sin ver el afuera"@es .
+
+<http://text2kg/chile/memoria#Violencia/cad%C3%A1veres_de_boca_enroscados_a_sus_verdugos> a chile:Violencia ;
+    rdfs:label "cadáveres de boca enroscados a sus verdugos"@es .
+
+<http://text2kg/chile/memoria#Violencia/camisa_desgarrada_y_manchada_de_sangre_seca> a chile:Violencia ;
+    rdfs:label "camisa desgarrada y manchada de sangre seca"@es .
+
+<http://text2kg/chile/memoria#Violencia/captura> a chile:Violencia ;
+    rdfs:label "captura"@es .
+
+<http://text2kg/chile/memoria#Violencia/centro_de_detenci%C3%B3n_clandestino> a chile:Violencia ;
+    rdfs:label "centro de detención clandestino"@es .
+
+<http://text2kg/chile/memoria#Violencia/centro_de_detenci%C3%B3n_y_tortura> a chile:Violencia ;
+    rdfs:label "centro de detención y tortura"@es .
+
+<http://text2kg/chile/memoria#Violencia/como_la_dictadura> a chile:Violencia ;
+    rdfs:label "como la dictadura"@es .
+
+<http://text2kg/chile/memoria#Violencia/compasi%C3%B3n_por_la_mujer_y_los_hijos_del_hombre_que_torturaba> a chile:Violencia ;
+    rdfs:label "compasión por la mujer y los hijos del hombre que torturaba"@es .
+
+<http://text2kg/chile/memoria#Violencia/cubierto_de_sangre_seca> a chile:Violencia ;
+    rdfs:label "cubierto de sangre seca"@es .
+
+<http://text2kg/chile/memoria#Violencia/cuerpecillos_ensangrentados_de_varias_palomas> a chile:Violencia ;
+    rdfs:label "cuerpecillos ensangrentados de varias palomas"@es .
+
+<http://text2kg/chile/memoria#Violencia/dedos_con_sangre_limpiados_en_la_muralla> a chile:Violencia ;
+    rdfs:label "dedos con sangre limpiados en la muralla"@es .
+
+<http://text2kg/chile/memoria#Violencia/dejan_que_sus_cuerpos_se_desangren_en_el_suelo> a chile:Violencia ;
+    rdfs:label "dejan que sus cuerpos se desangren en el suelo"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_bajo_el_estigma_de_Kaposi> a chile:Violencia ;
+    rdfs:label "desaparición bajo el estigma de Kaposi"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_casi_de_todos_nuestros_amigos> a chile:Violencia ;
+    rdfs:label "desaparición casi de todos nuestros amigos"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_casi_todas_las_locas> a chile:Violencia ;
+    rdfs:label "desaparición de casi todas las locas"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_la_gente> a chile:Violencia ;
+    rdfs:label "desaparición de la gente"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_las_gemelas> a chile:Violencia ;
+    rdfs:label "desaparición de las gemelas"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_los_prisioneros> a chile:Violencia ;
+    rdfs:label "desaparición de los prisioneros"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_los_seres_queridos> a chile:Violencia ;
+    rdfs:label "desaparición de los seres queridos"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_su_hermana_y_de_su_t%C3%ADa> a chile:Violencia ;
+    rdfs:label "desaparición de su hermana y de su tía"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_de_una_muchacha> a chile:Violencia ;
+    rdfs:label "desaparición de una muchacha"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_del_hermano_de_Jos%C3%A9> a chile:Violencia ;
+    rdfs:label "desaparición del hermano de José"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_en_los_%C3%BAltimos_d%C3%ADas_de_1973> a chile:Violencia ;
+    rdfs:label "desaparición en los últimos días de 1973"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_en_los_primeros_de_1974> a chile:Violencia ;
+    rdfs:label "desaparición en los primeros de 1974"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_en_los_vericuetos_del_enorme_Parlamento> a chile:Violencia ;
+    rdfs:label "desaparición en los vericuetos del enorme Parlamento"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_en_una_fumarola_de_tierra> a chile:Violencia ;
+    rdfs:label "desaparición en una fumarola de tierra"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_forzada> a chile:Violencia ;
+    rdfs:label "desaparición forzada"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_la_noche_de_su_secuestro> a chile:Violencia ;
+    rdfs:label "desaparición la noche de su secuestro"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_para_siempre> a chile:Violencia ;
+    rdfs:label "desaparición para siempre"@es .
+
+<http://text2kg/chile/memoria#Violencia/destino_final_de_doscientos_detenidos_desaparecidos> a chile:Violencia ;
+    rdfs:label "destino final de doscientos detenidos desaparecidos"@es .
+
+<http://text2kg/chile/memoria#Violencia/destrozaron_a_golpes_el_escaso_mobiliario> a chile:Violencia ;
+    rdfs:label "destrozaron a golpes el escaso mobiliario"@es .
+
+<http://text2kg/chile/memoria#Violencia/detenci%C3%B3n_por_un_grupo_de_los_Servicios_de_Seguridad> a chile:Violencia ;
+    rdfs:label "detención por un grupo de los Servicios de Seguridad"@es .
+
+<http://text2kg/chile/memoria#Violencia/detenidos_desaparecidos> a chile:Violencia ;
+    rdfs:label "detenidos desaparecidos"@es .
+
+<http://text2kg/chile/memoria#Violencia/dictadura_marxista> a chile:Violencia ;
+    rdfs:label "dictadura marxista"@es .
+
+<http://text2kg/chile/memoria#Violencia/dictadura_mucho_m%C3%A1s_severa> a chile:Violencia ;
+    rdfs:label "dictadura mucho más severa"@es .
+
+<http://text2kg/chile/memoria#Violencia/el_revolotear_de_los_estorninos_se_ensangrentaba> a chile:Violencia ;
+    rdfs:label "el revolotear de los estorninos se ensangrentaba"@es .
+
+<http://text2kg/chile/memoria#Violencia/el_tufo_mortuorio_de_la_dictadura> a chile:Violencia ;
+    rdfs:label "el tufo mortuorio de la dictadura"@es .
+
+<http://text2kg/chile/memoria#Violencia/ensangrentados_y_deformes> a chile:Violencia ;
+    rdfs:label "ensangrentados y deformes"@es .
+
+<http://text2kg/chile/memoria#Violencia/enterrado_en_una_fosa> a chile:Violencia ;
+    rdfs:label "enterrado en una fosa"@es .
+
+<http://text2kg/chile/memoria#Violencia/escenas_de_detenci%C3%B3n> a chile:Violencia ;
+    rdfs:label "escenas de detención"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_apresurados> a chile:Violencia ;
+    rdfs:label "golpes apresurados"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_de_la_puerta> a chile:Violencia ;
+    rdfs:label "golpes de la puerta"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_el%C3%A9ctricos> a chile:Violencia ;
+    rdfs:label "golpes eléctricos"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_en_el_coraz%C3%B3n> a chile:Violencia ;
+    rdfs:label "golpes en el corazón"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_en_el_cuerpo> a chile:Violencia ;
+    rdfs:label "golpes en el cuerpo"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_en_el_vientre> a chile:Violencia ;
+    rdfs:label "golpes en el vientre"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_en_la_cabeza> a chile:Violencia ;
+    rdfs:label "golpes en la cabeza"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_en_la_nuca> a chile:Violencia ;
+    rdfs:label "golpes en la nuca"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_en_la_pieza_vecina> a chile:Violencia ;
+    rdfs:label "golpes en la pieza vecina"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_en_la_puerta> a chile:Violencia ;
+    rdfs:label "golpes en la puerta"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_en_las_espaldas> a chile:Violencia ;
+    rdfs:label "golpes en las espaldas"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_en_los_cr%C3%A1neos> a chile:Violencia ;
+    rdfs:label "golpes en los cráneos"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_recibidos_por_los_nazis> a chile:Violencia ;
+    rdfs:label "golpes recibidos por los nazis"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_sobre_las_costillas_maltratadas> a chile:Violencia ;
+    rdfs:label "golpes sobre las costillas maltratadas"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_tumefactos> a chile:Violencia ;
+    rdfs:label "golpes tumefactos"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_y_patadas> a chile:Violencia ;
+    rdfs:label "golpes y patadas"@es .
+
+<http://text2kg/chile/memoria#Violencia/gritos_que_sal%C3%ADan_de_las_sesiones_de_tortura> a chile:Violencia ;
+    rdfs:label "gritos que salían de las sesiones de tortura"@es .
+
+<http://text2kg/chile/memoria#Violencia/haci%C3%A9ndose_cortes_con_hojas_de_afeitar_y_salpicando_de_sangre_las_p%C3%A1ginas_de_Balzac_o_Maupassant> a chile:Violencia ;
+    rdfs:label "haciéndose cortes con hojas de afeitar y salpicando de sangre las páginas de Balzac o Maupassant"@es .
+
+<http://text2kg/chile/memoria#Violencia/hechos_de_sangre> a chile:Violencia ;
+    rdfs:label "hechos de sangre"@es .
+
+<http://text2kg/chile/memoria#Violencia/interrogaron_y_torturaron_hasta_muy_tarde_en_la_noche> a chile:Violencia ;
+    rdfs:label "interrogaron y torturaron hasta muy tarde en la noche"@es .
+
+<http://text2kg/chile/memoria#Violencia/interrogatorio> a chile:Violencia ;
+    rdfs:label "interrogatorio"@es .
+
+<http://text2kg/chile/memoria#Violencia/interrogatorio_de_Jos%C3%A9_fue_uno_de_los_m%C3%A1s_duros> a chile:Violencia ;
+    rdfs:label "interrogatorio de José fue uno de los más duros"@es .
+
+<http://text2kg/chile/memoria#Violencia/interrogatorios_y_la_tortura> a chile:Violencia ;
+    rdfs:label "interrogatorios y la tortura"@es .
+
+<http://text2kg/chile/memoria#Violencia/lav%C3%A1ndola_con_su_sangre> a chile:Violencia ;
+    rdfs:label "lavándola con su sangre"@es .
+
+<http://text2kg/chile/memoria#Violencia/los_ojos_vendados> a chile:Violencia ;
+    rdfs:label "los ojos vendados"@es .
+
+<http://text2kg/chile/memoria#Violencia/luchaba_contra_sus_enemigos_pol%C3%ADticos> a chile:Violencia ;
+    rdfs:label "luchaba contra sus enemigos políticos"@es .
+
+<http://text2kg/chile/memoria#Violencia/m%C3%A9todos_de_tortura> a chile:Violencia ;
+    rdfs:label "métodos de tortura"@es .
+
+<http://text2kg/chile/memoria#Violencia/mancha_de_sangre_a_medio_secar> a chile:Violencia ;
+    rdfs:label "mancha de sangre a medio secar"@es .
+
+<http://text2kg/chile/memoria#Violencia/manchas_de_sangre_del_asesinato> a chile:Violencia ;
+    rdfs:label "manchas de sangre del asesinato"@es .
+
+<http://text2kg/chile/memoria#Violencia/marcas_de_ese_rouge_violento> a chile:Violencia ;
+    rdfs:label "marcas de ese rouge violento"@es .
+
+<http://text2kg/chile/memoria#Violencia/mataron_a_un_general_del_ej%C3%A9rcito_favorable_a_Allende> a chile:Violencia ;
+    rdfs:label "mataron a un general del ejército favorable a Allende"@es .
+
+<http://text2kg/chile/memoria#Violencia/negar_a_los_presos_y_a_los_torturados> a chile:Violencia ;
+    rdfs:label "negar a los presos y a los torturados"@es .
+
+<http://text2kg/chile/memoria#Violencia/nube_%C3%A1cida_de_la_represi%C3%B3n> a chile:Violencia ;
+    rdfs:label "nube ácida de la represión"@es .
+
+<http://text2kg/chile/memoria#Violencia/ojos_vendados> a chile:Violencia ;
+    rdfs:label "ojos vendados"@es .
+
+<http://text2kg/chile/memoria#Violencia/olfateaba_la_sangre> a chile:Violencia ;
+    rdfs:label "olfateaba la sangre"@es .
+
+<http://text2kg/chile/memoria#Violencia/pantalones_manchados_de_sangre> a chile:Violencia ;
+    rdfs:label "pantalones manchados de sangre"@es .
+
+<http://text2kg/chile/memoria#Violencia/pantalones_sucios_de_sangre> a chile:Violencia ;
+    rdfs:label "pantalones sucios de sangre"@es .
+
+<http://text2kg/chile/memoria#Violencia/parrillas_el%C3%A9ctricas> a chile:Violencia ;
+    rdfs:label "parrillas eléctricas"@es .
+
+<http://text2kg/chile/memoria#Violencia/piernas_y_muslos_torturados> a chile:Violencia ;
+    rdfs:label "piernas y muslos torturados"@es .
+
+<http://text2kg/chile/memoria#Violencia/recibir_de_golpes_y_puntapi%C3%A9s> a chile:Violencia ;
+    rdfs:label "recibir de golpes y puntapiés"@es .
+
+<http://text2kg/chile/memoria#Violencia/rudeza_de_los_golpes> a chile:Violencia ;
+    rdfs:label "rudeza de los golpes"@es .
+
+<http://text2kg/chile/memoria#Violencia/sangre> a chile:Violencia ;
+    rdfs:label "sangre"@es .
+
+<http://text2kg/chile/memoria#Violencia/sangre_del_pueblo> a chile:Violencia ;
+    rdfs:label "sangre del pueblo"@es .
+
+<http://text2kg/chile/memoria#Violencia/sangre_que_se_limpiaban_en_la_carpeta> a chile:Violencia ;
+    rdfs:label "sangre que se limpiaban en la carpeta"@es .
+
+<http://text2kg/chile/memoria#Violencia/sangre_salpicada_de_parches> a chile:Violencia ;
+    rdfs:label "sangre salpicada de parches"@es .
+
+<http://text2kg/chile/memoria#Violencia/sangre_sangra> a chile:Violencia ;
+    rdfs:label "sangre sangra"@es .
+
+<http://text2kg/chile/memoria#Violencia/sangre_y_hematomas_acrob%C3%A1ticos> a chile:Violencia ;
+    rdfs:label "sangre y hematomas acrobáticos"@es .
+
+<http://text2kg/chile/memoria#Violencia/se_desangraba_en_el_suelo_de_ese_cuartel> a chile:Violencia ;
+    rdfs:label "se desangraba en el suelo de ese cuartel"@es .
+
+<http://text2kg/chile/memoria#Violencia/se_fragmentaba_y_se_ensangrentaba> a chile:Violencia ;
+    rdfs:label "se fragmentaba y se ensangrentaba"@es .
+
+<http://text2kg/chile/memoria#Violencia/se_fue_en_sangre> a chile:Violencia ;
+    rdfs:label "se fue en sangre"@es .
+
+<http://text2kg/chile/memoria#Violencia/secuestros> a chile:Violencia ;
+    rdfs:label "secuestros"@es .
+
+<http://text2kg/chile/memoria#Violencia/sesi%C3%B3n_de_tortura> a chile:Violencia ;
+    rdfs:label "sesión de tortura"@es .
+
+<http://text2kg/chile/memoria#Violencia/sesiones_de_tortura> a chile:Violencia ;
+    rdfs:label "sesiones de tortura"@es .
+
+<http://text2kg/chile/memoria#Violencia/silencio> a chile:Violencia ;
+    rdfs:label "silencio"@es .
+
+<http://text2kg/chile/memoria#Violencia/simulacro_de_fusilamiento> a chile:Violencia ;
+    rdfs:label "simulacro de fusilamiento"@es .
+
+<http://text2kg/chile/memoria#Violencia/sobrevivencia_aporreada_de_la_dictadura> a chile:Violencia ;
+    rdfs:label "sobrevivencia aporreada de la dictadura"@es .
+
+<http://text2kg/chile/memoria#Violencia/sometidos_a_tortura> a chile:Violencia ;
+    rdfs:label "sometidos a tortura"@es .
+
+<http://text2kg/chile/memoria#Violencia/susto_cotidiano_de_la_dictadura> a chile:Violencia ;
+    rdfs:label "susto cotidiano de la dictadura"@es .
+
+<http://text2kg/chile/memoria#Violencia/terror_generalizado> a chile:Violencia ;
+    rdfs:label "terror generalizado"@es .
+
+<http://text2kg/chile/memoria#Violencia/testimonio_brutal_de_lo_que_hab%C3%ADa_hecho_como_agente_de_inteligencia> a chile:Violencia ;
+    rdfs:label "testimonio brutal de lo que había hecho como agente de inteligencia"@es .
+
+<http://text2kg/chile/memoria#Violencia/testimonios_de_secuestro> a chile:Violencia ;
+    rdfs:label "testimonios de secuestro"@es .
+
+<http://text2kg/chile/memoria#Violencia/torturaba> a chile:Violencia ;
+    rdfs:label "torturaba"@es .
+
+<http://text2kg/chile/memoria#Violencia/torturada> a chile:Violencia ;
+    rdfs:label "torturada"@es .
+
+<http://text2kg/chile/memoria#Violencia/torturado_y_asesinado> a chile:Violencia ;
+    rdfs:label "torturado y asesinado"@es .
+
+<http://text2kg/chile/memoria#Violencia/torturados_juntos> a chile:Violencia ;
+    rdfs:label "torturados juntos"@es .
+
+<http://text2kg/chile/memoria#Violencia/torturan> a chile:Violencia ;
+    rdfs:label "torturan"@es .
+
+<http://text2kg/chile/memoria#Violencia/torturando_gente> a chile:Violencia ;
+    rdfs:label "torturando gente"@es .
+
+<http://text2kg/chile/memoria#Violencia/torturar> a chile:Violencia ;
+    rdfs:label "torturar"@es .
+
+<http://text2kg/chile/memoria#Violencia/torturarlos_durante_el_d%C3%ADa_y_la_noche> a chile:Violencia ;
+    rdfs:label "torturarlos durante el día y la noche"@es .
+
+<http://text2kg/chile/memoria#Violencia/torturaron> a chile:Violencia ;
+    rdfs:label "torturaron"@es .
+
+<http://text2kg/chile/memoria#Violencia/torturaron_hasta_que_muri%C3%B3> a chile:Violencia ;
+    rdfs:label "torturaron hasta que murió"@es .
+
+<http://text2kg/chile/memoria#Violencia/torturaron_y_luego_quisieron_asesinar_a_su_padre> a chile:Violencia ;
+    rdfs:label "torturaron y luego quisieron asesinar a su padre"@es .
+
+<http://text2kg/chile/memoria#Violencia/torturas_a_estudiantes> a chile:Violencia ;
+    rdfs:label "torturas a estudiantes"@es .
+
+<http://text2kg/chile/memoria#Violencia/trasladarlos_a_sus_sesiones_de_tortura> a chile:Violencia ;
+    rdfs:label "trasladarlos a sus sesiones de tortura"@es .
+
+<http://text2kg/chile/memoria#Violencia/traumatismo_craneal> a chile:Violencia ;
+    rdfs:label "traumatismo craneal"@es .
+
+<http://text2kg/chile/memoria#Violencia/treinta_golpes> a chile:Violencia ;
+    rdfs:label "treinta golpes"@es .
+
+<http://text2kg/chile/memoria#Violencia/trenzado_a_golpes> a chile:Violencia ;
+    rdfs:label "trenzado a golpes"@es .
+
+<http://text2kg/chile/memoria#Violencia/tufo_mortuorio_de_la_dictadura> a chile:Violencia ;
+    rdfs:label "tufo mortuorio de la dictadura"@es .
+
+<http://text2kg/chile/memoria#Violencia/v%C3%B3mito_de_sangre> a chile:Violencia ;
+    rdfs:label "vómito de sangre"@es .
+
+<http://text2kg/chile/memoria#Violencia/vigilados_por_guardias_armados> a chile:Violencia ;
+    rdfs:label "vigilados por guardias armados"@es .
+
+<http://text2kg/chile/memoria#Violencia/vigilancia_de_Jos%C3%A9> a chile:Violencia ;
+    rdfs:label "vigilancia de José"@es .
+
+<http://text2kg/chile/memoria#Violencia/vigilando_en_el_ba%C3%B1o_personal> a chile:Violencia ;
+    rdfs:label "vigilando en el baño personal"@es .
+
+<http://text2kg/chile/memoria#Lugar/Cementerio_General> a chile:Lugar ;
+    rdfs:label "Cementerio General"@es .
+
+<http://text2kg/chile/memoria#Lugar/Vicar%C3%ADa_de_la_Solidaridad> a chile:Lugar ;
+    rdfs:label "Vicaría de la Solidaridad"@es .
+
+<http://text2kg/chile/memoria#Persona/el_general> a chile:Persona ;
+    rdfs:label "el general"@es .
+
+<http://text2kg/chile/memoria#Persona/el_sargento> a chile:Persona ;
+    rdfs:label "el sargento"@es .
+
+<http://text2kg/chile/memoria#Persona/los_coroneles> a chile:Persona ;
+    rdfs:label "los coroneles"@es .
+
+<http://text2kg/chile/memoria#Persona/un_teniente> a chile:Persona ;
+    rdfs:label "un teniente"@es .
+
+<http://text2kg/chile/memoria#Violencia/cuerpo_ensangrentado> a chile:Violencia ;
+    rdfs:label "cuerpo ensangrentado"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparecido> a chile:Violencia ;
+    rdfs:label "desaparecido"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparecidos> a chile:Violencia ;
+    rdfs:label "desaparecidos"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_en_las_costillas> a chile:Violencia ;
+    rdfs:label "golpes en las costillas"@es .
+
+<http://text2kg/chile/memoria#Violencia/secuestro> a chile:Violencia ;
+    rdfs:label "secuestro"@es .
+
+<http://text2kg/chile/memoria#Violencia/tortura> a chile:Violencia ;
+    rdfs:label "tortura"@es .
+
+<http://text2kg/chile/memoria#Violencia/torturas> a chile:Violencia ;
+    rdfs:label "torturas"@es .
+
+<http://text2kg/chile/memoria#Lugar/Estadio_Nacional> a chile:Lugar ;
+    rdfs:label "Estadio Nacional"@es .
+
+<http://text2kg/chile/memoria#Persona/el_coronel> a chile:Persona ;
+    rdfs:label "el coronel"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n> a chile:Violencia ;
+    rdfs:label "desaparición"@es .
+
+<http://text2kg/chile/memoria#Violencia/detenci%C3%B3n> a chile:Violencia ;
+    rdfs:label "detención"@es .
+
+<http://text2kg/chile/memoria#Violencia/interrogatorios> a chile:Violencia ;
+    rdfs:label "interrogatorios"@es .
+
+<http://text2kg/chile/memoria#Lugar/Escuela_Militar> a chile:Lugar ;
+    rdfs:label "Escuela Militar"@es .
+
+<http://text2kg/chile/memoria#Persona/el_teniente> a chile:Persona ;
+    rdfs:label "el teniente"@es .
+
+<http://text2kg/chile/memoria#Persona/los_generales> a chile:Persona ;
+    rdfs:label "los generales"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes> a chile:Violencia ;
+    rdfs:label "golpes"@es .
+
+<http://text2kg/chile/memoria#Violencia/desaparici%C3%B3n_del_cuerpo> a chile:Violencia ;
+    rdfs:label "desaparición del cuerpo"@es .
+
+<http://text2kg/chile/memoria#Violencia/golpes_en_el_est%C3%B3mago> a chile:Violencia ;
+    rdfs:label "golpes en el estómago"@es .
+
+<http://text2kg/chile/memoria#Persona/el_capit%C3%A1n> a chile:Persona ;
+    rdfs:label "el capitán"@es .
+

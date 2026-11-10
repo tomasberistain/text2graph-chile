@@ -1,22 +1,26 @@
+"""
+Extracción de entidades con GPT-4o-mini sobre el corpus de literatura chilena
+de memoria y dictadura.
 
-# =========================================================
-# PROYECTO FINAL TEXT2KG - Literatura chilena y memoria de la dictadura
-# CARTOGRAFIANDO LA VIOLENCIA
-# =========================================================
+Requiere los textos en data/input/ (no incluidos por derechos de autor) y una
+OPENAI_API_KEY en .env. Escribe output/resultados_memoria_chile.json y luego
+construye el grafo RDF con construir_grafo.py:
 
+    python src/extraccion.py
+"""
 import os
 import json
 import re
 import time
 from pathlib import Path
-from openai import OpenAI
-from openai import RateLimitError
-
-RUTA = Path("data/input")
 
 from dotenv import load_dotenv
-load_dotenv()
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+from openai import OpenAI, RateLimitError
+
+from construir_grafo import CORPUS_JSON, RESULTADOS_JSON, TTL_SALIDA, construir_grafo
+
+RUTA = Path("data/input")
+client = None  # se crea en main(), para poder importar este módulo sin API key
 
 # ------------------- CARGA DE ARCHIVOS DE REFERENCIA -------------------
 # 1. Lista oficial de palabras clave
@@ -168,75 +172,68 @@ def extraer_entidades(texto: str):
             "violencia_represiva": []}
 
 # ------------------- PROCESAMIENTO PRINCIPAL -------------------
-archivos = sorted(RUTA.glob("*.txt"))
-print(f"Encontrados {len(archivos)} archivos .txt\n")
+def main():
+    global client
+    load_dotenv()
+    client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
-resultados = {}
+    archivos = sorted(RUTA.glob("*.txt"))
+    print(f"Encontrados {len(archivos)} archivos .txt\n")
 
-for archivo in archivos:
-    nombre = archivo.stem
-    print(f"Procesando → {nombre}")
+    resultados = {}
 
-    texto = archivo.read_text(encoding="utf-8")
-    fragmentos = [texto[i:i+2200] for i in range(0, len(texto), 2000)]
+    for archivo in archivos:
+        nombre = archivo.stem
+        print(f"Procesando → {nombre}")
 
-    # Acumuladores
-    lugares_oficiales = set()
-    lugares_nuevos = set()
-    categorias_globales = {}
-    agentes_sospechosos = set()
-    violencia_represiva = set()
+        texto = archivo.read_text(encoding="utf-8")
+        fragmentos = [texto[i:i+2200] for i in range(0, len(texto), 2000)]
 
-    for i, frag in enumerate(fragmentos):
-        print(f"   Chunk {i+1}/{len(fragmentos)}", end=" ")
-        data = extraer_entidades(frag)
-        lugares_oficiales.update(data["lugares_en_listas_oficiales"])
-        lugares_nuevos.update(data["lugares_nuevos_con_palabra_clave"])
-        agentes_sospechosos.update(data["personas_agentes_sospechosos"])
-        violencia_represiva.update(data["violencia_represiva"])
-        for key, cat in data["categorias_lugares_nuevos"].items():
-            categorias_globales[key] = cat
-        print("✓")
+        # Acumuladores
+        lugares_oficiales = set()
+        lugares_nuevos = set()
+        categorias_globales = {}
+        agentes_sospechosos = set()
+        violencia_represiva = set()
 
-        time.sleep(26)
+        for i, frag in enumerate(fragmentos):
+            print(f"   Chunk {i+1}/{len(fragmentos)}", end=" ")
+            data = extraer_entidades(frag)
+            lugares_oficiales.update(data["lugares_en_listas_oficiales"])
+            lugares_nuevos.update(data["lugares_nuevos_con_palabra_clave"])
+            agentes_sospechosos.update(data["personas_agentes_sospechosos"])
+            violencia_represiva.update(data["violencia_represiva"])
+            for key, cat in data["categorias_lugares_nuevos"].items():
+                categorias_globales[key] = cat
+            print("✓")
 
-    resultados[nombre] = {
-        "texto": nombre.replace("_", " "),
-        "lugares_oficiales": sorted(lugares_oficiales),
-        "lugares_nuevos_represivos": sorted(lugares_nuevos),
-        "categorias_detectadas": categorias_globales,
-        "agentes_sospechosos": sorted(agentes_sospechosos),
-        "violencia_represiva": sorted(violencia_represiva)
-    }
+            time.sleep(26)
 
-    print(f"Listo el texto {nombre}")
-    print(f"   {len(lugares_oficiales)} lugares oficiales")
-    print(f"   {len(lugares_nuevos)} lugares nuevos detectados por palabras clave")
-    print(f"   {len(agentes_sospechosos)} posibles agentes")
-    print(f"   {len(violencia_represiva)} instancias de violencia represiva\n")
+        resultados[nombre] = {
+            "texto": nombre.replace("_", " "),
+            "lugares_oficiales": sorted(lugares_oficiales),
+            "lugares_nuevos_represivos": sorted(lugares_nuevos),
+            "categorias_detectadas": categorias_globales,
+            "agentes_sospechosos": sorted(agentes_sospechosos),
+            "violencia_represiva": sorted(violencia_represiva)
+        }
 
-# GUARDAR LOS RESULTADOS EN UN JSON
-with open("output/RESULTADOS_FINALES_MEMORIA_CHILE.json", "w", encoding="utf-8") as f:
-    json.dump(resultados, f, ensure_ascii=False, indent=2)
+        print(f"Listo el texto {nombre}")
+        print(f"   {len(lugares_oficiales)} lugares oficiales")
+        print(f"   {len(lugares_nuevos)} lugares nuevos detectados por palabras clave")
+        print(f"   {len(agentes_sospechosos)} posibles agentes")
+        print(f"   {len(violencia_represiva)} instancias de violencia represiva\n")
 
-# GENERAR LOS TRIPLES
-triples = ['@prefix : <http://text2kg/chile/memoria#> .', '']
+    # GUARDAR LOS RESULTADOS EN UN JSON
+    with open(RESULTADOS_JSON, "w", encoding="utf-8") as f:
+        json.dump(resultados, f, ensure_ascii=False, indent=2)
 
-for nombre, data in resultados.items():
-    texto_id = nombre.replace(" ", "_")
-    for lugar in data["lugares_oficiales"]:
-        l_id = lugar.replace(" ", "_").replace("(", "").replace(")", "")
-        triples.append(f":Texto/{texto_id} :mencionaLugarOficial :Lugar/{l_id} .")
-    for lugar in data["lugares_nuevos_represivos"]:
-        l_id = lugar.replace(" ", "_").replace("(", "").replace(")", "")
-        triples.append(f":Texto/{texto_id} :mencionaLugarRepresivoDetectado :Lugar/{l_id} .")
-    for persona in data["agentes_sospechosos"]:
-        p_id = persona.replace(" ", "_")
-        triples.append(f":Texto/{texto_id} :mencionaAgenteSospechoso :Persona/{p_id} .")
-    for vio in data["violencia_represiva"]:
-        v_id = vio.replace(" ", "_").replace("(", "").replace(")", "")
-        triples.append(f":Texto/{texto_id} :mencionaViolenciaRepresiva :Violencia/{v_id} .")
+    # CONSTRUIR EL GRAFO RDF
+    corpus = json.loads(CORPUS_JSON.read_text(encoding="utf-8")) if CORPUS_JSON.exists() else {}
+    grafo = construir_grafo(resultados, corpus)
+    grafo.serialize(TTL_SALIDA, format="turtle", encoding="utf-8")
+    print(f"Grafo RDF: {TTL_SALIDA} ({len(grafo)} triples)")
 
-with open("output/grafo_memoria_chile.ttl", "w", encoding="utf-8") as f:
-    f.write("\n".join(triples))
 
+if __name__ == "__main__":
+    main()

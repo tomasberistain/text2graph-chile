@@ -2,6 +2,8 @@
 
 Extracción de entidades y construcción de grafos de conocimiento a partir de literatura chilena de memoria y dictadura.
 
+**[Ver el grafo interactivo →](https://tomasberistain.github.io/text2graph-chile/)**
+
 ## Descripción
 
 Este proyecto procesa un corpus de doce obras literarias chilenas vinculadas a la dictadura militar (1973–1990), extrayendo entidades (personas, lugares, actos de violencia) mediante un modelo de lenguaje y estructurándolas como un grafo de conocimiento en formato RDF.
@@ -27,20 +29,23 @@ El resultado es una visualización interactiva que mapea la violencia represiva 
 
 ## Flujo del proyecto
 ```
-Textos literarios (.txt) → Extracción de entidades (GPT-4o-mini) → Filtrado por palabras clave → Triples RDF (.ttl) → Grafo interactivo (.html)
+Textos (.txt) → Extracción (GPT-4o-mini) → Filtrado por palabras clave → Resultados (.json) → Grafo RDF (.ttl, rdflib) → Grafo interactivo (.html, pyvis)
 ```
 
 ## Estructura del repositorio
 ```
 text2graph-chile/
 ├─ data/
-│  ├─ input/          ← textos literarios (no incluidos, ver nota)
-│  └─ reference/      ← listas de referencia histórica y palabras clave
-├─ output/            ← resultados: JSON, TTL, HTML del grafo
-├─ ontologia/         ← ontología OWL del dominio
+│  ├─ input/                ← textos literarios (no incluidos, ver nota)
+│  └─ reference/            ← listas de referencia histórica, palabras clave y metadatos del corpus
+├─ docs/
+│  └─ index.html            ← grafo publicado en GitHub Pages
+├─ ontologia/               ← ontología OWL del dominio
+├─ output/                  ← resultados: JSON, TTL y HTML del grafo
 ├─ src/
-│  ├─ extraccion.py     ← extracción y generación de triples
-│  └─ visualizacion.py  ← construcción y visualización del grafo
+│  ├─ extraccion.py         ← extracción de entidades con GPT-4o-mini
+│  ├─ construir_grafo.py    ← construcción del grafo RDF con rdflib
+│  └─ visualizacion.py      ← visualización interactiva con pyvis
 ├─ .env.example
 ├─ requirements.txt
 └─ README.md
@@ -49,7 +54,7 @@ text2graph-chile/
 ## Requisitos
 
 - Python 3.9+
-- API key de OpenAI
+- API key de OpenAI (solo para la extracción)
 
 ## Instalación
 ```bash
@@ -58,33 +63,37 @@ cd text2graph-chile
 pip install -r requirements.txt
 ```
 
-Crear un archivo `.env` en la raíz del proyecto basándose en `.env.example`:
+## Uso
+
+### Prueba rápida (sin API key ni corpus)
+
+El repositorio incluye los resultados de la extracción (`output/resultados_memoria_chile.json`), así que el grafo se puede reconstruir y visualizar directamente:
+```bash
+python src/construir_grafo.py
+python src/visualizacion.py
+```
+
+Genera `output/grafo_memoria_chile.ttl` y `output/grafo_memoria_chile.html`, que se abre directamente en el navegador.
+
+### Pipeline completo
+
+Requiere los textos del corpus en `data/input/` y un archivo `.env` en la raíz, basado en `.env.example`:
 ```
 OPENAI_API_KEY=tu_api_key
 ```
 
-## Uso
-
-**1. Extracción de entidades y generación de triples RDF:**
-
-Colocar los archivos `.txt` del corpus en `data/input/` y ejecutar:
 ```bash
 python src/extraccion.py
-```
-
-Genera `output/RESULTADOS_FINALES_MEMORIA_CHILE.json` y `output/grafo_memoria_chile.ttl`.
-
-**2. Visualización del grafo:**
-```bash
 python src/visualizacion.py
 ```
 
-Genera `output/memoria_chile_grafo_CATEGORIAS_ACTUALIZADAS.html`, que puede abrirse directamente en el navegador.
+`extraccion.py` procesa cada texto por fragmentos, guarda `output/resultados_memoria_chile.json` y construye el grafo RDF.
 
 ## Archivos de referencia
 
 - `data/reference/referencia_dictadura_chile.json` — lista curada de personas, organismos y lugares históricos de la dictadura chilena, usada para validar y clasificar las entidades extraídas.
 - `data/reference/palabras_clave_memoria_chile.json` — vocabulario temático organizado por categorías (tortura, desaparición, represión, etc.) para el filtrado de entidades.
+- `data/reference/corpus.json` — título y autoría de cada obra, usados como etiquetas en el grafo.
 
 ## Nota sobre los textos
 
@@ -103,7 +112,7 @@ Los textos del corpus no se incluyen en este repositorio por razones de derechos
 *La dimensión desconocida* de Nona Fernández es el texto con mayor densidad del corpus: 54 instancias de violencia, 41 lugares represivos detectados y 3 lugares oficiales. Es seguida por *La casa de los espíritus* de Isabel Allende con 24 instancias de violencia y 14 agentes identificados. En el extremo opuesto, los textos poéticos de Zurita (*Purgatorio*, *Anteparaíso*) y *Bobby Sands desfallece* de Berenguer registran muy poca o ninguna violencia explícita, la represión aparece de forma oblicua o simbólica.
 
 **"El capitán"**
-La figura de "el capitán" aparece en 9 de los 12 textos del corpus: en Berenguer, Allende, Fernández, Bolaño, Zurita (dos veces), Díaz Eterovic, Lemebel (dos veces). El grafo no puede resolver si se trata del mismo hombre, pero su recurrencia a lo largo de autoras y géneros tan distintos sugiere que opera como arquetipo literario del agente represor anónimo.
+La figura de "el capitán" aparece en 10 de los 12 textos del corpus: en Berenguer, Allende, Fernández, Bolaño (dos veces), Zurita (dos veces), Díaz Eterovic, Lemebel (dos veces). El grafo no puede resolver si se trata del mismo hombre, pero su recurrencia a lo largo de autoras y géneros tan distintos sugiere que opera como arquetipo literario del agente represor anónimo.
 
 **Lugares**
 El Estadio Nacional aparece en 3 textos (*Bandera de Chile*, *La dimensión desconocida*, *Tengo miedo torero*), la Escuela Militar en 4, y la Vicaría de la Solidaridad en 2. Los textos narrativos concentran la mayoría de los lugares oficiales; la poesía tiende a lugares genéricos o simbólicos (cárceles, cuarteles sin nombre).
